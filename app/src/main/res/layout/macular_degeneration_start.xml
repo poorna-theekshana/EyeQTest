@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/titleTextView"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Macular Degeneration Test"
+        android:textColor="#0F1056"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="22dp"
+        tools:layout_editor_absoluteY="40dp" />
+
+    <TextView
+        android:id="@+id/instructionsTextView"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Instructions:"
+        android:textColor="#0F1056"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="41dp"
+        tools:layout_editor_absoluteY="120dp" />
+
+    <TextView
+        android:id="@+id/instructionsDetailTextView"
+
+        android:layout_width="318dp"
+        android:layout_height="46dp"
+        android:text="Follow the on-screen prompts and respond accordingly."
+        android:textColor="#0F1056"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="57dp"
+        tools:layout_editor_absoluteY="229dp" />
+
+    <Button
+        android:id="@+id/startTestButton"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#578DB0"
+        android:text="Start Test"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="533dp" />
+
+    <Button
+        android:id="@+id/cancelButton"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:text="Cancel"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="124dp"
+        tools:layout_editor_absoluteY="593dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
