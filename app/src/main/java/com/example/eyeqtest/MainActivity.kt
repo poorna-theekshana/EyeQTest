@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
             imgUser.setImageResource(R.drawable.account_icon)
             imgNews.setImageResource(R.drawable.newsletter_icon)
             supportFragmentManager.beginTransaction().apply {
-                replace(R.id.mainfragment, fragmentHome)
+                replace(R.id.fragmentContainerView, fragmentHome)
                 commit()
             }
         }
@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
             imgUser.setImageResource(R.drawable.selected_user)
             imgNews.setImageResource(R.drawable.newsletter_icon)
             supportFragmentManager.beginTransaction().apply {
-                replace(R.id.mainfragment, fragmentUser)
+                replace(R.id.fragmentContainerView, fragmentUser)
                 commit()
             }
         }
@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() {
             imgUser.setImageResource(R.drawable.account_icon)
             imgNews.setImageResource(R.drawable.selected_newsletter)
             supportFragmentManager.beginTransaction().apply {
-                replace(R.id.mainfragment, fragmentNews)
+                replace(R.id.fragmentContainerView, fragmentNews)
                 commit()
             }
         }

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ColorBlindTest.ColorBlindTestRight">
+
+    <TextView
+        android:id="@+id/cbTestRQuestion"
+        android:layout_width="322dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="45dp"
+        android:gravity="center"
+        android:text="What can you see?"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbTestImageRight" />
+
+    <Button
+        android:id="@+id/answer2btnR"
+        android:layout_width="77dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginBottom="106dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/answer3btnR"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/answer1btnR"
+        app:layout_constraintTop_toBottomOf="@+id/cbTestRQuestion" />
+
+    <Button
+        android:id="@+id/answer1btnR"
+        android:layout_width="77dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginBottom="106dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/answer2btnR"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbTestRQuestion" />
+
+    <Button
+        android:id="@+id/answer3btnR"
+        android:layout_width="77dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginBottom="106dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/answer4btnR"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/answer2btnR"
+        app:layout_constraintTop_toBottomOf="@+id/cbTestRQuestion" />
+
+    <Button
+        android:id="@+id/answer4btnR"
+        android:layout_width="77dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginBottom="106dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/answer3btnR"
+        app:layout_constraintTop_toBottomOf="@+id/cbTestRQuestion" />
+
+    <ImageView
+        android:id="@+id/cbTestImageRight"
+        android:layout_width="400dp"
+        android:layout_height="469dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cbtestplate2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
