@@ -17,45 +17,92 @@
         tools:layout_editor_absoluteX="-58dp"
         tools:layout_editor_absoluteY="-18dp" />
 
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="409dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/purple_200"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView2"
+        tools:layout_editor_absoluteX="1dp" />
+
     <TextView
-        android:id="@+id/resultTitleTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/titleTextView2"
+        android:layout_width="221dp"
+        android:layout_height="55dp"
         android:layout_gravity="center"
+        android:layout_marginTop="28dp"
         android:text="Test Results"
-        android:textSize="24sp"
+        android:textAlignment="center"
+        android:textColor="#0F1056"
+        android:textSize="34sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="129dp"
-        tools:layout_editor_absoluteY="60dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <TextView
         android:id="@+id/resultTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Your test results go here."
-        android:textSize="18sp"
-        tools:layout_editor_absoluteX="58dp"
-        tools:layout_editor_absoluteY="220dp" />
+        android:text="Congratulations !"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/resultTextView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider2"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/resultTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="You passed the test"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:layout_width="225dp"
 
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:text="Share Results"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="25dp"
-        tools:layout_editor_absoluteY="571dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="225dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:background="@android:color/darker_gray"
         android:text="Back to Home"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="640dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintVertical_bias="0.107" />
 
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="253dp"
+        android:layout_height="243dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/baseline_check_circle_outline_24"
+        tools:layout_editor_absoluteY="260dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
