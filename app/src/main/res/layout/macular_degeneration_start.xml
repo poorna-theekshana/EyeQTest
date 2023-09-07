@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="527dp"
+        android:layout_height="767dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/background" />
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="349dp"
+        android:layout_height="95dp"
+        android:layout_gravity="center"
+        android:text="Macular Degeneration
+        Test"
+        android:textAlignment="center"
+        android:textColor="#0F1056"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/instructionsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Instructions:"
+        android:textColor="#0F1056"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/divider"
+        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintStart_toStartOf="@+id/divider"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+
+    <TextView
+        android:id="@+id/instructionsDetailTextView3"
+        android:layout_width="370dp"
+        android:layout_height="42dp"
+        android:text="03. Sit comfortably 1 to 2 feet away from the device screen."
+        android:textColor="#0F1056"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/instructionsDetailTextView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instructionsDetailTextView2" />
+
+    <TextView
+        android:id="@+id/instructionsDetailTextView1"
+        android:layout_width="370dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="1dp"
+        android:text="01. Ensure good lighting in the room and reduce glare on the device screen."
+        android:textColor="#0F1056"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/instructionsDetailTextView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instructionsTextView" />
+
+    <TextView
+        android:id="@+id/instructionsDetailTextView2"
+        android:layout_width="370dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="1dp"
+        android:text="02. Place the device at eye level on a stable surface."
+        android:textColor="#0F1056"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/instructionsDetailTextView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instructionsDetailTextView1" />
+
+    <TextView
+        android:id="@+id/instructionsDetailTextView6"
+        android:layout_width="370dp"
+        android:layout_height="45dp"
+        android:text="06. Follow on-screen prompts and respond accordingly."
+        android:textColor="#0F1056"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/instructionsDetailTextView7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instructionsDetailTextView5" />
+
+    <TextView
+        android:id="@+id/instructionsDetailTextView5"
+        android:layout_width="370dp"
+        android:layout_height="27dp"
+        android:text="05. Focus on the central dot on the screen."
+        android:textColor="#0F1056"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/instructionsDetailTextView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instructionsDetailTextView4" />
+
+    <TextView
+        android:id="@+id/instructionsDetailTextView7"
+        android:layout_width="370dp"
+        android:layout_height="45dp"
+        android:text="07. You may need to identify and tap on objects or shapes as instructed."
+        android:textColor="#0F1056"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/instructionsDetailTextView8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instructionsDetailTextView6" />
+
+    <TextView
+        android:id="@+id/instructionsDetailTextView8"
+        android:layout_width="370dp"
+        android:layout_height="27dp"
+        android:layout_marginBottom="23dp"
+        android:text="08. Complete the test as accurately as possible."
+        android:textColor="#0F1056"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/instructionsDetailTextView11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instructionsDetailTextView7" />
+
+    <TextView
+        android:id="@+id/instructionsDetailTextView4"
+        android:layout_width="370dp"
+        android:layout_height="45dp"
+        android:text="04. Start the test by tapping the 'Start Test' button."
+        android:textColor="#0F1056"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/instructionsDetailTextView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instructionsDetailTextView3" />
+
+    <TextView
+        android:id="@+id/instructionsDetailTextView11"
+        android:layout_width="376dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="16dp"
+        android:text="Remember to maintain the specified distance from the device screen for accurate results and follow the on-screen instructions carefully."
+        android:textAlignment="center"
+        android:textColor="#0F1056"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instructionsDetailTextView8" />
+
+    <Button
+        android:id="@+id/startTestButton"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:background="#578DB0"
+        android:text="Start Test"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/cancelButton"
+        app:layout_constraintTop_toBottomOf="@+id/instructionsDetailTextView11"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="130dp" />
+
+    <Button
+        android:id="@+id/cancelButton"
+
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:background="@android:color/darker_gray"
+        android:text="Cancel"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="409dp"
+        android:layout_height="2dp"
+        android:background="@color/purple_200"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="103dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
