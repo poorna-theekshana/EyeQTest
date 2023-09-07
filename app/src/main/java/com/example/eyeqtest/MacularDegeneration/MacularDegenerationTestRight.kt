@@ -45,15 +45,11 @@ class MacularDegenerationTestRight : AppCompatActivity() {
     }
 
     private fun redirectToResultActivity() {
-        // Create an intent to start the MacularDegenerationResult activity
         val intent = Intent(this, MacularDegenerationResult::class.java)
-
-        // Start the new activity
         startActivity(intent)
     }
 
     override fun onBackPressed() {
-        // Show a message when the user presses the back button
         if (userChoice < 2) {
             Toast.makeText(this, "You Should Consult a Doctor", Toast.LENGTH_SHORT).show()
         }
