@@ -38,18 +38,18 @@
         android:layout_marginTop="33dp"
         android:backgroundTint="#578DB0"
         android:text="Contrast Sensitivity Test"
-        app:layout_constraintEnd_toStartOf="@+id/depthTestBtn"
+        app:layout_constraintEnd_toStartOf="@+id/mascularTestBtn"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/colorBlindTestBtn" />
 
     <Button
-        android:id="@+id/depthTestBtn"
+        android:id="@+id/mascularTestBtn"
         android:layout_width="140dp"
         android:layout_height="100dp"
         android:layout_marginTop="32dp"
         android:backgroundTint="#578DB0"
-        android:text="Depth Perception Test"
+        android:text="Macular Degneration Test"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/contrastTestBtn"
