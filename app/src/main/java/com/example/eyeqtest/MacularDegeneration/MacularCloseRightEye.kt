@@ -8,14 +8,12 @@ import com.example.eyeqtest.R
 
 class MacularCloseRightEye : AppCompatActivity() {
 
-    private var userChoice: Int = 0 // Initialize the variable
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_macular_close_right_eye)
 
         // Retrieve the userChoice variable from the previous activity
-        userChoice = intent.getIntExtra("userChoice", 0)
+        var userChoice = intent.getIntExtra("userChoice", 0)
 
         val continuebtn: Button = findViewById(R.id.cbCloseRightButton)
 
