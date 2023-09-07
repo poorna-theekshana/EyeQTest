@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Astigmatism.AstigmatismResults">
-
+    tools:context=".Astigmatism.AstigmatismFail">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -16,6 +15,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/background" />
+
 
     <TextView
         android:id="@+id/titleTextView2"
@@ -38,7 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Great !"
+        android:text="Poor !"
         android:textAlignment="center"
         android:textColor="#0F1056"
         android:textSize="34sp"
@@ -52,7 +52,7 @@
         android:layout_width="341dp"
         android:layout_height="53dp"
         android:layout_marginTop="10dp"
-        android:text="You seem to show no signs of Astigmatism in this test."
+        android:text="You may be astigmatic."
         android:textAlignment="center"
         android:textColor="#0F1056"
         android:textSize="20sp"
@@ -66,7 +66,7 @@
         android:layout_width="341dp"
         android:layout_height="53dp"
         android:layout_marginTop="10dp"
-        android:text="Keep a check on your vision by regularly visiting your eye care professional."
+        android:text="We suggest consulting with an optician or ophthalmologist"
         android:textAlignment="center"
         android:textColor="#560F17"
         android:textSize="20sp"
@@ -109,6 +109,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/resultTextView"
-        app:srcCompat="@drawable/baseline_mood_24" />
+        app:srcCompat="@drawable/baseline_mood_bad_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
