@@ -13,96 +13,95 @@
         android:id="@+id/imageView2"
         android:layout_width="527dp"
         android:layout_height="767dp"
-        app:srcCompat="@drawable/background"
-        tools:layout_editor_absoluteX="-58dp"
-        tools:layout_editor_absoluteY="-18dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/background" />
 
-    <View
-        android:id="@+id/divider2"
-        android:layout_width="409dp"
-        android:layout_height="2dp"
-        android:layout_marginTop="20dp"
-        android:background="@color/purple_200"
-        app:layout_constraintTop_toBottomOf="@+id/titleTextView2"
-        tools:layout_editor_absoluteX="1dp" />
 
     <TextView
         android:id="@+id/titleTextView2"
-        android:layout_width="221dp"
-        android:layout_height="55dp"
+        android:layout_width="279dp"
+        android:layout_height="63dp"
         android:layout_gravity="center"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="64dp"
         android:text="Test Results"
         android:textAlignment="center"
         android:textColor="#0F1056"
-        android:textSize="34sp"
+        android:textSize="40sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/resultTextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
 
     <TextView
         android:id="@+id/resultTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
         android:text="Congratulations !"
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold"
+        android:textColor="#0F1056"
         app:layout_constraintBottom_toTopOf="@+id/resultTextView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider2"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/resultTextView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="32dp"
         android:text="You passed the test"
         android:textAlignment="center"
+        android:textColor="#0F1056"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/imageView5"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="225dp"
-
+        android:id="@+id/normal_button"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#0F1056"
+        android:gravity="center"
         android:text="Share Results"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
     <Button
-        android:layout_width="225dp"
+        android:id="@+id/normal_button2"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:background="@android:color/darker_gray"
+        android:backgroundTint="#0F1056"
+        android:gravity="center"
         android:text="Back to Home"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
-        app:layout_constraintVertical_bias="0.107" />
+        app:layout_constraintTop_toBottomOf="@+id/normal_button" />
 
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="253dp"
         android:layout_height="243dp"
+        android:layout_marginBottom="212dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/baseline_check_circle_outline_24"
-        tools:layout_editor_absoluteY="260dp" />
+        app:srcCompat="@drawable/baseline_check_circle_outline_24" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
