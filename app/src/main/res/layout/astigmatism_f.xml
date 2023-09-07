@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/titleTextView"
+        android:id="@+id/colorBlindTitle"
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/instructionsTextView"
+        android:id="@+id/cbInstructions"
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -32,7 +32,7 @@
         android:textColor="#0F1056"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/colorBlindTitle" />
 
     <TextView
         android:id="@+id/instructionsDetailTextView"
@@ -47,10 +47,10 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/instructionsTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/cbInstructions" />
 
     <TextView
-        android:id="@+id/instructionsDetailTextView1"
+        android:id="@+id/cbInstruct_1"
 
         android:layout_width="335dp"
         android:layout_height="46dp"
@@ -66,7 +66,7 @@
         app:layout_constraintTop_toBottomOf="@+id/instructionsDetailTextView" />
 
     <TextView
-        android:id="@+id/instructionsDetailTextView2"
+        android:id="@+id/cbInstruct_2"
 
         android:layout_width="335dp"
         android:layout_height="46dp"
@@ -79,10 +79,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/instructionsDetailTextView1" />
+        app:layout_constraintTop_toBottomOf="@+id/cbInstruct_1" />
 
     <TextView
-        android:id="@+id/instructionsDetailTextView3"
+        android:id="@+id/cbInstruct_3"
         android:layout_width="335dp"
         android:layout_height="46dp"
         android:layout_marginStart="38dp"
@@ -94,7 +94,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/instructionsDetailTextView2" />
+        app:layout_constraintTop_toBottomOf="@+id/cbInstruct_2" />
 
     <Button
         android:id="@+id/log_button"
@@ -108,7 +108,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/instructionsDetailTextView3" />
+        app:layout_constraintTop_toBottomOf="@+id/cbInstruct_3" />
 
     <Button
         android:id="@+id/close_button"

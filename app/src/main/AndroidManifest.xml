@@ -12,19 +12,37 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EyeQTest"
         tools:targetApi="31">
-
-        <activity android:name=".ContrastSensivityActivity"
+        <activity
+            android:name=".ColorBlindTest.ColorTestResults"
+            android:exported="false" />
+        <activity
+            android:name=".ColorBlindTest.ColorBlindTestLeft"
+            android:exported="false" />
+        <activity
+            android:name=".ColorBlindTest.ColorBlindTestRight"
+            android:exported="false" />
+        <activity
+            android:name=".ColorBlindTest.CloseRightEye"
+            android:exported="false" />
+        <activity
+            android:name=".ColorBlindTest.CloseLeftEye"
+            android:exported="false" />
+        <activity
+            android:name=".ColorBlindTest.ColorBlindHome"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".ResultActivity">
+
             <!-- Add any intent filters or other configurations as needed -->
         </activity>
-
-        <!-- Include any necessary permissions here if your app requires them -->
     </application>
+
 </manifest>
