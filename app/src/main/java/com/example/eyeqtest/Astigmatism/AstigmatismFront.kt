@@ -1,9 +1,11 @@
-package com.example.eyeqtest
+package com.example.eyeqtest.Astigmatism
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.example.eyeqtest.MainActivity
+import com.example.eyeqtest.R
 
 class AstigmatismFront : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

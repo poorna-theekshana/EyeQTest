@@ -1,24 +1,20 @@
-package com.example.eyeqtest
+package com.example.eyeqtest.Astigmatism
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import com.example.eyeqtest.ColorBlindTest.ColorBlindTestRight
+import com.example.eyeqtest.R
 
-class AstigmatismCloseRightEye : AppCompatActivity() {
-
+class AstigmatismCloseLeftEye : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_close_right_eye)
-
-        val firstChoice = intent.getIntExtra("firstChoice", 0)
+        setContentView(R.layout.activity_close_left_eye)
 
         val continuebtn: Button = findViewById(R.id.cbCloseRightButton)
 
         continuebtn.setOnClickListener {
-            val intent = Intent(this, Astigmatism2::class.java)
-            intent.putExtra("firstChoice", firstChoice)
+            val intent = Intent(this, Astigmatism::class.java)
             startActivity(intent)
         }
     }

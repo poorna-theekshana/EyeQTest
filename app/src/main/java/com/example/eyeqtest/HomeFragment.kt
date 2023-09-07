@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import com.example.eyeqtest.Astigmatism.AstigmatismFront
 import com.example.eyeqtest.ColorBlindTest.ColorBlindHome
 import com.example.eyeqtest.MacularDegeneration.MacularDegenerationFront
 

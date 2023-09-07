@@ -7,11 +7,21 @@
     android:layout_height="match_parent"
     tools:context=".HomeFragment">
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="527dp"
+        android:layout_height="767dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/background" />
+
     <Button
         android:id="@+id/colorBlindTestBtn"
-        android:layout_width="140dp"
+        android:layout_width="150dp"
         android:layout_height="100dp"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="#578DB0"
         android:text="Color Vision Test"
         app:layout_constraintEnd_toStartOf="@+id/astigmatismTestBtn"
@@ -21,9 +31,9 @@
 
     <Button
         android:id="@+id/astigmatismTestBtn"
-        android:layout_width="140dp"
+        android:layout_width="150dp"
         android:layout_height="100dp"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="#578DB0"
         android:text="Astigmatism  Test"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,9 +43,9 @@
 
     <Button
         android:id="@+id/contrastTestBtn"
-        android:layout_width="140dp"
+        android:layout_width="150dp"
         android:layout_height="100dp"
-        android:layout_marginTop="33dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="#578DB0"
         android:text="Contrast Sensitivity Test"
         app:layout_constraintEnd_toStartOf="@+id/mascularTestBtn"
@@ -45,9 +55,9 @@
 
     <Button
         android:id="@+id/mascularTestBtn"
-        android:layout_width="140dp"
+        android:layout_width="150dp"
         android:layout_height="100dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="#578DB0"
         android:text="Macular Degneration Test"
         app:layout_constraintEnd_toEndOf="parent"
@@ -57,16 +67,14 @@
 
     <Button
         android:id="@+id/uniqueFeatureBtn"
-        android:layout_width="352dp"
-        android:layout_height="103dp"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="34dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="46dp"
+        android:layout_width="328dp"
+        android:layout_height="97dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="42dp"
         android:backgroundTint="#0578DB"
         android:text="Eye Warm-up assistant"
         android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -74,12 +82,12 @@
 
     <ImageView
         android:id="@+id/homelogo"
-        android:layout_width="239dp"
-        android:layout_height="181dp"
-        android:layout_marginStart="78dp"
-        android:layout_marginTop="27dp"
-        android:layout_marginEnd="95dp"
-        android:src="@drawable/lg"
+        android:layout_width="245dp"
+        android:layout_height="213dp"
+        android:layout_marginStart="86dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="86dp"
+        android:src="@drawable/logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -88,11 +96,8 @@
         android:id="@+id/textView2"
         android:layout_width="322dp"
         android:layout_height="48dp"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="37dp"
-        android:layout_marginEnd="52dp"
         android:gravity="center"
-        android:text="motto of the application"
+        android:text="Better Vision, Better Life"
         android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"

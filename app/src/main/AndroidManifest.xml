@@ -12,24 +12,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EyeQTest"
         tools:targetApi="31">
-
         <activity
-            android:name=".Astigmatism"
+            android:name=".Astigmatism.Astigmatism"
             android:exported="false" />
         <activity
-            android:name=".Astigmatism2"
+            android:name=".Astigmatism.Astigmatism2"
             android:exported="false" />
         <activity
-            android:name=".AstigmatismFront"
+            android:name=".Astigmatism.AstigmatismFront"
             android:exported="false" />
         <activity
-            android:name=".AstigmatismCloseLeftEye"
+            android:name=".Astigmatism.AstigmatismFail"
             android:exported="false" />
         <activity
-            android:name=".AstigmatismCloseRightEye"
+            android:name=".Astigmatism.AstigmatismCloseLeftEye"
             android:exported="false" />
         <activity
-            android:name=".AstigmatismResults"
+            android:name=".Astigmatism.AstigmatismCloseRightEye"
+            android:exported="false" />
+        <activity
+            android:name=".Astigmatism.AstigmatismResults"
             android:exported="false" />
         <activity
             android:name=".ColorBlindTest.ColorTestResults"
