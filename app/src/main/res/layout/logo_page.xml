@@ -9,18 +9,25 @@
         android:id="@+id/imageView"
         android:layout_width="263dp"
         android:layout_height="495dp"
-        app:srcCompat="@drawable/lg"
-        tools:layout_editor_absoluteX="74dp"
-        tools:layout_editor_absoluteY="66dp" />
+        android:layout_marginTop="66dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/Logo" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="-60dp"
+        android:layout_marginEnd="73dp"
+        android:fontFamily="sans-serif"
         android:text="Better Vision, Better Life"
-        android:textSize="30dp"
+        android:textSize="24sp"
         android:textStyle="bold"
         android:typeface="sans"
-        tools:layout_editor_absoluteX="38dp"
-        tools:layout_editor_absoluteY="486dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 </androidx.constraintlayout.widget.ConstraintLayout>
