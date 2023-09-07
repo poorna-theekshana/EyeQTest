@@ -12,19 +12,31 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EyeQTest"
         tools:targetApi="31">
-
-        <activity android:name=".ContrastSensivityActivity"
+        <activity
+            android:name=".CloseRightEye"
+            android:exported="false" />
+        <activity
+            android:name=".CloseLeftEye"
+            android:exported="false" />
+        <activity
+            android:name=".AstigmatismFront"
+            android:exported="false" />
+        <activity
+            android:name=".Astigmatism"
+            android:exported="false" />
+        <activity
+            android:name=".ContrastSensivityActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".ResultActivity">
+
             <!-- Add any intent filters or other configurations as needed -->
         </activity>
-
-        <!-- Include any necessary permissions here if your app requires them -->
     </application>
+
 </manifest>
