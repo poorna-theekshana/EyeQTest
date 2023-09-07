@@ -1,0 +1,55 @@
+<!-- activity_quiz.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContrastSensivityActivity">
+
+    <!-- Question ImageView -->
+    <ImageView
+        android:id="@+id/questionImageView"
+        android:layout_width="match_parent"
+        android:layout_height="369dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Question Image"
+        android:src="@drawable/contrast_question1_image" />
+
+    <!-- Answer Buttons -->
+
+    <Button
+        android:id="@+id/answer1Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/questionImageView"
+        android:layout_marginTop="16dp"
+        android:text="Answer 1" />
+
+    <Button
+        android:id="@+id/answer2Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/answer1Button"
+        android:layout_marginTop="16dp"
+        android:text="Answer 2" />
+
+    <Button
+        android:id="@+id/answer3Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/answer2Button"
+        android:layout_marginTop="16dp"
+        android:text="Answer 3" />
+
+    <Button
+        android:id="@+id/answer4Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/answer3Button"
+        android:layout_marginTop="16dp"
+        android:text="Answer 4" />
+
+    <!-- Repeat the above Button layout for answer2Button, answer3Button, and answer4Button -->
+
+</RelativeLayout>
