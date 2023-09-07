@@ -20,15 +20,6 @@ class UserFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_user, container, false)
 
-        val colorblindtest = view.findViewById<Button>(R.id.button)
-
-        colorblindtest.setOnClickListener {
-            val intent = Intent(activity, ColorBlindHome::class.java)
-            startActivity(intent)
-        }
-
-
-
         return view
     }
 

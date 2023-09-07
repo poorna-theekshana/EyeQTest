@@ -8,16 +8,94 @@
     tools:context=".HomeFragment">
 
     <Button
-        android:id="@+id/cbtesthomebtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="87dp"
-        android:layout_marginTop="138dp"
-        android:layout_marginEnd="230dp"
-        android:layout_marginBottom="545dp"
-        android:text="Button"
+        android:id="@+id/colorBlindTestBtn"
+        android:layout_width="140dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="22dp"
+        android:backgroundTint="#578DB0"
+        android:text="Color Vision Test"
+        app:layout_constraintEnd_toStartOf="@+id/astigmatismTestBtn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/astigmatismTestBtn"
+        android:layout_width="140dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="22dp"
+        android:backgroundTint="#578DB0"
+        android:text="Astigmatism  Test"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/colorBlindTestBtn"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/contrastTestBtn"
+        android:layout_width="140dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="33dp"
+        android:backgroundTint="#578DB0"
+        android:text="Contrast Sensitivity Test"
+        app:layout_constraintEnd_toStartOf="@+id/depthTestBtn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/colorBlindTestBtn" />
+
+    <Button
+        android:id="@+id/depthTestBtn"
+        android:layout_width="140dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#578DB0"
+        android:text="Depth Perception Test"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/contrastTestBtn"
+        app:layout_constraintTop_toBottomOf="@+id/astigmatismTestBtn" />
+
+    <Button
+        android:id="@+id/uniqueFeatureBtn"
+        android:layout_width="352dp"
+        android:layout_height="103dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="46dp"
+        android:backgroundTint="#0578DB"
+        android:text="Eye Warm-up assistant"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contrastTestBtn" />
+
+    <ImageView
+        android:id="@+id/homelogo"
+        android:layout_width="239dp"
+        android:layout_height="181dp"
+        android:layout_marginStart="78dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="95dp"
+        android:src="@drawable/lg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="322dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="52dp"
+        android:gravity="center"
+        android:text="motto of the application"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homelogo" />
 </androidx.constraintlayout.widget.ConstraintLayout>

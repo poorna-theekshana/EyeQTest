@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import com.example.eyeqtest.ColorBlindTest.CloseRightEye
 import com.example.eyeqtest.ColorBlindTest.ColorBlindHome
 
 class HomeFragment : Fragment() {
@@ -19,15 +18,12 @@ class HomeFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_home, container, false)
 
-        val colorblindtest = view.findViewById<Button>(R.id.cbtesthomebtn)
+        val colorblindtest = view.findViewById<Button>(R.id.colorBlindTestBtn)
 
         colorblindtest.setOnClickListener {
             val intent = Intent(activity, ColorBlindHome::class.java)
             startActivity(intent)
         }
-
-
-
         return view
     }
 
