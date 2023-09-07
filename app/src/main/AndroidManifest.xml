@@ -12,6 +12,11 @@
         android:theme="@style/Theme.EyeQTest"
         tools:targetApi="31">
         <activity
+            android:name=".Astigmatism_Front"
+            android:exported="false"
+            android:label="@string/title_activity_astigmatism_front"
+            android:theme="@style/Theme.EyeQTest.NoActionBar" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
