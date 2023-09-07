@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">EyeQTest</string>
 
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
     //Welcome
     <string name="viewpjct">View Projects</string>
