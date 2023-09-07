@@ -12,13 +12,19 @@
         android:theme="@style/Theme.EyeQTest"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".ContrastSensivityActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <!-- Add the ResultActivity entry here -->
+        <activity
+            android:name=".ResultActivity"
+            android:exported="true">
         </activity>
     </application>
 
