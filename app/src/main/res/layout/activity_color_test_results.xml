@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".ColorBlindTest.ColorTestResults">
 
     <TextView
@@ -23,50 +24,49 @@
 
     <TextView
         android:id="@+id/cbLeftEyeResults"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="27dp"
+        android:layout_width="106dp"
+        android:layout_height="29dp"
         android:gravity="center"
         android:text="TextView"
         android:textSize="25dp"
         app:layout_constraintEnd_toStartOf="@+id/cbRightEyeResults"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cbResultsLeftDes" />
+        app:layout_constraintTop_toBottomOf="@+id/cbresultActionL" />
 
     <TextView
         android:id="@+id/cbRightEyeResults"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="27dp"
+        android:layout_width="106dp"
+        android:layout_height="29dp"
         android:gravity="center"
         android:text="TextView"
         android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/cbLeftEyeResults"
-        app:layout_constraintTop_toBottomOf="@+id/cbResultsRightDes" />
+        app:layout_constraintTop_toBottomOf="@+id/cbresultActionR" />
 
     <Button
         android:id="@+id/cbResultsbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="153dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="148dp"
-        android:layout_marginBottom="95dp"
+        android:layout_marginBottom="52dp"
+        android:backgroundTint="#0F1056"
         android:text="CONTINUE"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cbLeftEyeResults"
-        app:layout_constraintVertical_bias="0.864" />
+        app:layout_constraintTop_toBottomOf="@+id/cbshareResults" />
 
     <TextView
         android:id="@+id/cbResultsLeftDes"
         android:layout_width="153dp"
         android:layout_height="41dp"
-        android:layout_marginTop="188dp"
+        android:layout_marginTop="75dp"
         android:gravity="center"
         android:text="Left Eye"
         android:textSize="30dp"
@@ -80,7 +80,7 @@
         android:id="@+id/cbResultsRightDes"
         android:layout_width="148dp"
         android:layout_height="41dp"
-        android:layout_marginTop="186dp"
+        android:layout_marginTop="75dp"
         android:gravity="center"
         android:text="Right Eye"
         android:textSize="30dp"
@@ -89,4 +89,66 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/cbResultsLeftDes"
         app:layout_constraintTop_toBottomOf="@+id/cbResults" />
+
+    <TextView
+        android:id="@+id/cbresultActionL"
+        android:layout_width="128dp"
+        android:layout_height="34dp"
+        android:gravity="center"
+        android:text="TextView"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/cbresultActionR"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbResultEmoL" />
+
+    <TextView
+        android:id="@+id/cbresultActionR"
+        android:layout_width="128dp"
+        android:layout_height="34dp"
+        android:gravity="center"
+        android:text="TextView"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cbresultActionL"
+        app:layout_constraintTop_toBottomOf="@+id/cbResultEmoR" />
+
+    <ImageView
+        android:id="@+id/cbResultEmoL"
+        android:layout_width="180dp"
+        android:layout_height="181dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/cbResultEmoR"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbResultsLeftDes"
+        app:srcCompat="@drawable/average_emo" />
+
+    <ImageView
+        android:id="@+id/cbResultEmoR"
+        android:layout_width="180dp"
+        android:layout_height="181dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cbResultEmoL"
+        app:layout_constraintTop_toBottomOf="@+id/cbResultsRightDes"
+        app:srcCompat="@drawable/poor_emo" />
+
+    <Button
+        android:id="@+id/cbshareResults"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="158dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="159dp"
+        android:backgroundTint="#0F1056"
+        android:text="Share REsults"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbLeftEyeResults" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
