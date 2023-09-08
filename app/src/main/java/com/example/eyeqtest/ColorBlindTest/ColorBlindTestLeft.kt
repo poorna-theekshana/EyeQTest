@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
-import com.example.eyeqtest.ContrastSensivity
+import com.example.eyeqtest.ContrastSensivity.ContrastSensivity
 import com.example.eyeqtest.R
 
 class ColorBlindTestLeft : AppCompatActivity() {

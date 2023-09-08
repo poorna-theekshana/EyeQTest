@@ -1,4 +1,4 @@
-package com.example.eyeqtest
+package com.example.eyeqtest.ContrastSensivity
 
 import android.app.Activity
 import android.content.Intent
@@ -6,6 +6,9 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.Toast
+import com.example.eyeqtest.Astigmatism.AstigmatismResults
+import com.example.eyeqtest.MainActivity
+import com.example.eyeqtest.R
 
 class ContrastSensivityActivity : Activity() {
 
@@ -73,10 +76,10 @@ class ContrastSensivityActivity : Activity() {
             if (selectedAnswerIndex == currentQuestion.correctAnswerIndex) {
 
                 correctAnswers++
-                showToast("Correct!")
+
             } else {
 
-                showToast("Incorrect!")
+
             }
 
 
@@ -86,9 +89,17 @@ class ContrastSensivityActivity : Activity() {
 
 
         if (currentQuestionIndex == questions.size) {
-            val intent = Intent(this, ResultActivity::class.java)
-            intent.putExtra("correctAnswers", correctAnswers)
-            startActivity(intent)
+            if(correctAnswers > 4) {
+                val intent = Intent(this, ResultActivity::class.java)
+                intent.putExtra("correctAnswers", correctAnswers)
+                startActivity(intent)
+            }
+            else
+            {
+                val intent = Intent(this, ResultBadActivity::class.java)
+                intent.putExtra("correctAnswers", correctAnswers)
+                startActivity(intent)
+            }
         }
     }
 

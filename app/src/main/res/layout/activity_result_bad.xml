@@ -7,16 +7,16 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/background"
-    tools:context=".ContrastSensivity.ResultActivity">
+    tools:context=".ContrastSensivity.ResultBadActivity">
 
 
     <TextView
         android:id="@+id/titleTextView2"
-        android:layout_width="279dp"
-        android:layout_height="63dp"
+        android:layout_width="285dp"
+        android:layout_height="114dp"
         android:layout_gravity="center"
         android:layout_marginTop="64dp"
-        android:text="Test Results"
+        android:text="Sorry !"
         android:textAlignment="center"
         android:textColor="#0F1056"
         android:textSize="40sp"
@@ -32,8 +32,8 @@
         android:id="@+id/resultTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="28dp"
-        android:text="Congratulations !"
+        android:layout_marginBottom="8dp"
+        android:text="You have failed the Test"
         android:textAlignment="center"
         android:textColor="#0F1056"
         android:textSize="24sp"
@@ -47,13 +47,13 @@
         android:id="@+id/resultTextView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="72dp"
+        android:layout_marginBottom="24dp"
         android:text="You passed the test"
         android:textAlignment="center"
         android:textColor="#0F1056"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/ic_check_circle"
+        app:layout_constraintBottom_toTopOf="@+id/ic_cancel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent" />
@@ -70,7 +70,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ic_check_circle" />
+        app:layout_constraintTop_toBottomOf="@+id/ic_cancel" />
 
     <Button
         android:id="@+id/normal_button2"
@@ -85,17 +85,15 @@
         app:layout_constraintTop_toBottomOf="@+id/normal_button" />
 
     <ImageView
-        android:id="@+id/ic_check_circle"
-        android:layout_marginBottom="264dp"
+        android:id="@+id/ic_cancel"
+        android:layout_width="253dp"
+        android:layout_height="243dp"
+        android:layout_marginBottom="248dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.592"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_width="match_parent"
-        android:layout_height="264dp"
-        android:layout_marginTop="150dp"
-        android:contentDescription="Question Image"
-        tools:srcCompat="@drawable/ic_check_circle" />
+        app:srcCompat="@drawable/ic_cancel"
+        tools:srcCompat="@drawable/ic_cancel" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

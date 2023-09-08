@@ -1,4 +1,4 @@
-package com.example.eyeqtest
+package com.example.eyeqtest.ContrastSensivity
 
 data class ContrastSensivity(
     val imageResourceId: Int,
