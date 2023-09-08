@@ -19,7 +19,7 @@ class AstigmatismResults : AppCompatActivity() {
         shareButton.setOnClickListener {
             val shareIntent = Intent(Intent.ACTION_SEND)
             shareIntent.type = "text/plain"
-            val shareMessage = "Check out my awesome results!"
+            val shareMessage = "Astigmatism Test Results\n You seem to show no signs of Astigmatism in this test."
             shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage)
             startActivity(Intent.createChooser(shareIntent, "Share via"))
         }
