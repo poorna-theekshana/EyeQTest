@@ -44,6 +44,8 @@
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
             android:text="Answer 1"
+            android:backgroundTint="#0F1056"
+            android:textColor="@color/white"
             android:textSize="16sp" />
 
         <Button
@@ -54,6 +56,8 @@
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
             android:text="Answer 2"
+            android:backgroundTint="#0F1056"
+            android:textColor="@color/white"
             android:textSize="16sp" />
 
         <Button
@@ -65,6 +69,8 @@
             android:layout_marginTop="32dp"
             android:layout_marginEnd="30dp"
             android:text="Answer 3"
+            android:backgroundTint="#0F1056"
+            android:textColor="@color/white"
             android:textSize="16sp" />
 
         <Button
@@ -76,6 +82,8 @@
             android:layout_marginTop="32dp"
             android:layout_marginEnd="30dp"
             android:text="Answer 4"
+            android:backgroundTint="#0F1056"
+            android:textColor="@color/white"
             android:textSize="16sp" />
     </GridLayout>
 

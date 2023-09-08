@@ -3,6 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.eyeqtest">
 
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -78,10 +81,21 @@
         <activity
             android:name=".MacularDegeneration.MacularDegenerationTestRight"
             android:exported="false" />
-        <activity android:name=".ResultActivity">
-
-            <!-- Add any intent filters or other configurations as needed -->
-        </activity>
+        <activity
+            android:name=".ContrastSensivity.ContrastSensivityActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ContrastSensivity.ContrastSensivityFront"
+            android:exported="false" />
+        <activity
+            android:name=".blinkingrouting.EyesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ContrastSensivity.ResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ContrastSensivity.ResultBadActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
