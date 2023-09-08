@@ -28,7 +28,7 @@
         android:layout_marginTop="16dp"
         android:text="Blink Count: 0"
         android:textSize="24sp"
-        android:textColor="#FF5733"
+        android:textColor="#FFFFFF"
         android:layout_alignParentTop="true" />
 
 

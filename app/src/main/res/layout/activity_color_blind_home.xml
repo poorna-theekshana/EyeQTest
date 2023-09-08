@@ -4,51 +4,53 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".ColorBlindTest.ColorBlindHome">
 
     <ImageView
-        android:id="@+id/cbBackground"
-        android:layout_width="527dp"
-        android:layout_height="767dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/imageView5"
+        android:layout_width="70dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="-10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/background" />
+        app:srcCompat="@drawable/colorblind" />
 
     <TextView
         android:id="@+id/colorBlindTitle"
-        android:layout_width="333dp"
-        android:layout_height="86dp"
+        android:layout_width="363dp"
+        android:layout_height="62dp"
         android:layout_gravity="center"
-        android:text="Color Vision                Test"
+        android:layout_marginTop="-20dp"
+        android:text="Color Vision Test"
         android:textAlignment="center"
         android:textColor="#0F1056"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
     <TextView
         android:id="@+id/cbInstructions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="10dp"
         android:text="Instructions:"
         android:textColor="#0F1056"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.055"
-        app:layout_constraintStart_toStartOf="@+id/divider"
-        app:layout_constraintTop_toBottomOf="@+id/divider" />
+        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/colorBlindTitle" />
 
     <TextView
         android:id="@+id/cbInstruct_3"
         android:layout_width="372dp"
         android:layout_height="46dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         android:text="03. If you wear glasses or contact lenses, wear them for the test"
         android:textColor="#0F1056"
         android:textSize="17sp"
@@ -60,7 +62,7 @@
         android:id="@+id/cbInstruct_1"
         android:layout_width="369dp"
         android:layout_height="52dp"
-        android:layout_marginTop="17dp"
+        android:layout_marginTop="10dp"
         android:text="01. Ensure good lighting in the room and reduce   glare on the device screen."
         android:textColor="#0F1056"
         android:textSize="17sp"
@@ -73,7 +75,7 @@
         android:id="@+id/cbInstruct_2"
         android:layout_width="375dp"
         android:layout_height="30dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         android:text="02. Test one eye at a time"
         android:textColor="#0F1056"
         android:textSize="17sp"
@@ -86,7 +88,7 @@
         android:id="@+id/cbInstruct_6"
         android:layout_width="367dp"
         android:layout_height="43dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         android:text="06. You may need to identify the current objects."
         android:textColor="#0F1056"
         android:textSize="17sp"
@@ -98,7 +100,7 @@
         android:id="@+id/cbInstruct_5"
         android:layout_width="369dp"
         android:layout_height="45dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="10dp"
         android:text="05. Start the test by tapping the 'Start Test' button."
         android:textColor="#0F1056"
         android:textSize="17sp"
@@ -106,24 +108,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cbInstruct_4" />
 
-    <TextView
-        android:id="@+id/cbInstruct_7"
-        android:layout_width="360dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="12dp"
-        android:text="07. Complete the test as accurately as possible."
-        android:textColor="#0F1056"
-        android:textSize="17sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cbInstruct_6" />
 
     <TextView
         android:id="@+id/cbInstruct_4"
         android:layout_width="367dp"
         android:layout_height="46dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         android:text="04. Hold the screen about 40cm or 15 inches away"
         android:textColor="#0F1056"
         android:textSize="17sp"
@@ -135,7 +125,7 @@
         android:id="@+id/cbNote"
         android:layout_width="376dp"
         android:layout_height="66dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:text="Remember to maintain the specified distance from the device screen for accurate results and follow the on-screen instructions carefully."
         android:textAlignment="center"
         android:textColor="#0F1056"
@@ -143,7 +133,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cbInstruct_7" />
+        app:layout_constraintTop_toBottomOf="@+id/cbInstruct_6" />
 
     <Button
         android:id="@+id/cbStartTestButton"
@@ -165,27 +155,13 @@
 
         android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginBottom="16dp"
         android:backgroundTint="#0F1056"
         android:text="Cancel"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cbStartTestButton" />
 
-    <View
-        android:id="@+id/divider"
-        android:layout_width="409dp"
-        android:layout_height="2dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="1dp"
-        android:background="@color/purple_200"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/colorBlindTitle" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -55,14 +55,7 @@ class HomeFragment : Fragment() {
             val intent = Intent(activity, EyesActivity::class.java)
             startActivity(intent)
         }
-
-
-
-
-
-
-
-
+        
         return view
     }
 
