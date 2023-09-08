@@ -10,7 +10,10 @@ import android.view.ViewGroup
 import android.widget.Button
 import com.example.eyeqtest.Astigmatism.AstigmatismFront
 import com.example.eyeqtest.ColorBlindTest.ColorBlindHome
+import com.example.eyeqtest.ContrastSensivity.ContrastSensivityActivity
+import com.example.eyeqtest.ContrastSensivity.ContrastSensivityFront
 import com.example.eyeqtest.MacularDegeneration.MacularDegenerationFront
+import com.example.eyeqtest.blinkingrouting.EyesActivity
 
 class HomeFragment : Fragment() {
 
@@ -26,6 +29,7 @@ class HomeFragment : Fragment() {
         val astigmatismtest = view.findViewById<Button>(R.id.astigmatismTestBtn)
         val masculartest = view.findViewById<Button>(R.id.mascularTestBtn)
         val contrastsentest = view.findViewById<Button>(R.id.contrastTestBtn)
+        val uniqueFeatureBtn = view.findViewById<Button>(R.id.uniqueFeatureBtn)
 
         colorblindtest.setOnClickListener {
             val intent = Intent(activity, ColorBlindHome::class.java)
@@ -43,9 +47,15 @@ class HomeFragment : Fragment() {
         }
 
         contrastsentest.setOnClickListener {
-            val intent = Intent(activity, ContrastSensivityActivity::class.java)
+            val intent = Intent(activity, ContrastSensivityFront::class.java)
             startActivity(intent)
         }
+
+        uniqueFeatureBtn.setOnClickListener {
+            val intent = Intent(activity, EyesActivity::class.java)
+            startActivity(intent)
+        }
+
 
 
 
