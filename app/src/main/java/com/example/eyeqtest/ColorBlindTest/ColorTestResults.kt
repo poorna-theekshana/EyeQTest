@@ -53,13 +53,15 @@ class ColorTestResults : AppCompatActivity() {
             val rightemo = findViewById<ImageView>(R.id.cbResultEmoR)
 
             rightemo.setImageResource(R.drawable.poor_emo)
-            rightgrade.text = "poor"
+            rightgrade.setTextColor(resources.getColor(R.color.red))
+            rightgrade.text = "Poor"
         }
         else if(rightCorrectAnswers <= 4){
             val rightgrade = findViewById<TextView>(R.id.cbresultActionR)
             val rightemo = findViewById<ImageView>(R.id.cbResultEmoR)
 
             rightemo.setImageResource(R.drawable.average_emo)
+            rightgrade.setTextColor(resources.getColor(R.color.yellow))
             rightgrade.text = "Average"
         }
         else{
@@ -67,6 +69,7 @@ class ColorTestResults : AppCompatActivity() {
             val rightemo = findViewById<ImageView>(R.id.cbResultEmoR)
 
             rightemo.setImageResource(R.drawable.excellent_emo)
+            rightgrade.setTextColor(resources.getColor(R.color.green))
             rightgrade.text = "Excellent"
         }
 
@@ -78,13 +81,15 @@ class ColorTestResults : AppCompatActivity() {
             val leftemo = findViewById<ImageView>(R.id.cbResultEmoL)
 
             leftemo.setImageResource(R.drawable.poor_emo)
-            leftgrade.text = "poor"
+            leftgrade.setTextColor(resources.getColor(R.color.red))
+            leftgrade.text = "Poor"
         }
         else if(LeftCorrectAnswers <= 4){
             val leftgrade = findViewById<TextView>(R.id.cbresultActionL)
             val leftemo = findViewById<ImageView>(R.id.cbResultEmoL)
 
             leftemo.setImageResource(R.drawable.average_emo)
+            leftgrade.setTextColor(resources.getColor(R.color.yellow))
             leftgrade.text = "Average"
         }
         else{
@@ -92,6 +97,7 @@ class ColorTestResults : AppCompatActivity() {
             val leftemo = findViewById<ImageView>(R.id.cbResultEmoL)
 
             leftemo.setImageResource(R.drawable.excellent_emo)
+            leftgrade.setTextColor(resources.getColor(R.color.green))
             leftgrade.text = "Excellent"
         }
 
