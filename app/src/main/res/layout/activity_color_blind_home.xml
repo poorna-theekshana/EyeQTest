@@ -148,10 +148,10 @@
     <Button
         android:id="@+id/cbStartTestButton"
 
-        android:layout_width="318dp"
-        android:layout_height="41dp"
+        android:layout_width="323dp"
+        android:layout_height="52dp"
         android:layout_marginTop="20dp"
-        android:background="#578DB0"
+        android:backgroundTint="#0F1056"
         android:text="Start Test"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
@@ -167,7 +167,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:layout_marginBottom="16dp"
-        android:background="@android:color/darker_gray"
+        android:backgroundTint="#0F1056"
         android:text="Cancel"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
