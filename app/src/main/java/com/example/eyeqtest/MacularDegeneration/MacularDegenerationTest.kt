@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.content.Intent
 import android.widget.Button
+import android.widget.Toast
 import com.example.eyeqtest.R
 
 class MacularDegenerationTest : AppCompatActivity() {
@@ -14,8 +15,8 @@ class MacularDegenerationTest : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_macular_degeneration_test)
 
-        val buttonNo = findViewById<Button>(R.id.No)
-        val buttonYes = findViewById<Button>(R.id.Yes)
+        val buttonNo = findViewById<Button>(R.id.btnNo)
+        val buttonYes = findViewById<Button>(R.id.btnYes)
 
         buttonNo.setOnClickListener {
             userChoice = 1 // Assign 1 for "No"
@@ -23,19 +24,14 @@ class MacularDegenerationTest : AppCompatActivity() {
         }
 
         buttonYes.setOnClickListener {
-
+            Toast.makeText(this, "Your Right Eye Sight is Poor, Contact Your Ophthalmologist", Toast.LENGTH_SHORT).show()
             redirectToNextActivity()
         }
     }
 
     private fun redirectToNextActivity() {
-        // Create an intent to start the MacularCloseRightEye activity
-        val intent = Intent(this, MacularCloseRightEye::class.java)
-
-        // Pass the userChoice variable to the next activity using extras
+       val intent = Intent(this, MacularCloseRightEye::class.java)
         intent.putExtra("userChoice", userChoice)
-
-        // Start the new activity
-        startActivity(intent)
+       startActivity(intent)
     }
 }
