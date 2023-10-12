@@ -1,5 +1,6 @@
 package com.example.eyeqtest.UserAccount
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
@@ -16,5 +17,22 @@ class ViewResult : AppCompatActivity() {
         val asigT = findViewById<Button>(R.id.asig_test)
         val contrstT = findViewById<Button>(R.id.contrast_test)
         val macularT = findViewById<Button>(R.id.macular_test)
+
+        colorT.setOnClickListener {
+            val intent = Intent(this,ColorBlindProfileRecords::class.java)
+            startActivity(intent)
+        }
+        asigT.setOnClickListener {
+            val intent = Intent(this,ColorBlindProfileRecords::class.java)
+            startActivity(intent)
+        }
+        contrstT.setOnClickListener {
+            val intent = Intent(this,ColorBlindProfileRecords::class.java)
+            startActivity(intent)
+        }
+        macularT.setOnClickListener {
+            val intent = Intent(this,ColorBlindProfileRecords::class.java)
+            startActivity(intent)
+        }
     }
 }
