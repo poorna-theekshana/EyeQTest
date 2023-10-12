@@ -16,6 +16,18 @@
         android:theme="@style/Theme.EyeQTest"
         tools:targetApi="31">
         <activity
+            android:name=".WelcomePage.ResetPasswordPage"
+            android:exported="false" />
+        <activity
+            android:name=".WelcomePage.SignUpPage"
+            android:exported="false" />
+        <activity
+            android:name=".WelcomePage.SignInPage"
+            android:exported="false" />
+        <activity
+            android:name=".WelcomePage.WelcomePage"
+            android:exported="false" />
+        <activity
             android:name=".HandEyeCoordination.HandEYETest"
             android:exported="false" />
         <activity
@@ -95,6 +107,9 @@
             android:exported="false" />
         <activity
             android:name=".MacularDegeneration.MacularDegenerationResult"
+            android:exported="false" />
+        <activity
+            android:name=".MacularDegeneration.MacularDegenerationFail"
             android:exported="false" />
         <activity
             android:name=".MacularDegeneration.MacularDegenerationTest"

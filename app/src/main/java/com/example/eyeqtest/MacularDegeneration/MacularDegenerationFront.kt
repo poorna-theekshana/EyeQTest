@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.example.eyeqtest.MainActivity
 import com.example.eyeqtest.R
 
 class MacularDegenerationFront : AppCompatActivity() {
@@ -12,11 +13,20 @@ class MacularDegenerationFront : AppCompatActivity() {
         setContentView(R.layout.activity_macular_degeneration_front)
 
         val startTestButton = findViewById<View>(R.id.start_test_button)
+        val closeButton = findViewById<View>(R.id.close_button)
+
 
         // Set an OnClickListener for the button
         startTestButton.setOnClickListener {
             // Create an intent to start the MacularDegenerationTest activity
             val intent = Intent(this, MacularCloseLeftEye::class.java)
+
+            // Start the new activity
+            startActivity(intent)
+        }
+        closeButton.setOnClickListener {
+            // Create an intent to start the MacularDegenerationTest activity
+            val intent = Intent(this, MainActivity::class.java)
 
             // Start the new activity
             startActivity(intent)
