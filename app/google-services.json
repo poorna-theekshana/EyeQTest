@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "380810565835",
+    "project_id": "eyeqtest-d26eb",
+    "storage_bucket": "eyeqtest-d26eb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:380810565835:android:7d8c25166241e9fee2634e",
+        "android_client_info": {
+          "package_name": "com.example.eyeqtest"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmqwmtELwip5gAzfetr5UlR5yduLyTKGo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

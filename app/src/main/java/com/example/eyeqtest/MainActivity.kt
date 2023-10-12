@@ -4,12 +4,16 @@ import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
 class MainActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val firebase : DatabaseReference = FirebaseDatabase.getInstance().getReference()
 
         val imgHome: ImageButton = findViewById(R.id.homebutton)
         val imgNews: ImageButton = findViewById(R.id.newletterbutton)
