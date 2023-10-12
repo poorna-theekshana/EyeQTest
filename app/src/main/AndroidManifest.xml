@@ -24,11 +24,12 @@
         <activity
             android:name=".UserAccount.AsigmatismRecords"
             android:exported="false" />
-        <activity
-            android:name=".UserAccount.ColorBlindProfileRecords"
-            android:exported="false" />
+
         <activity
             android:name=".UserAccount.ViewResult"
+            android:exported="false" />
+        <activity
+            android:name=".UserAccount.ColorBlindProfileRecords"
             android:exported="false" />
         <activity
             android:name=".UserAccount.EditUserAccount"
