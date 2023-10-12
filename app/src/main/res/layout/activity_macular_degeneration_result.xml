@@ -62,7 +62,7 @@
         android:textColor="#0F1056"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/imageView5"
+        app:layout_constraintBottom_toTopOf="@+id/cbpageicon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent" />
@@ -79,7 +79,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+        app:layout_constraintTop_toBottomOf="@+id/cbpageicon" />
 
     <Button
         android:id="@+id/normal_button2"
@@ -94,7 +94,7 @@
         app:layout_constraintTop_toBottomOf="@+id/normal_button" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/cbpageicon"
         android:layout_width="253dp"
         android:layout_height="243dp"
         android:layout_marginBottom="212dp"

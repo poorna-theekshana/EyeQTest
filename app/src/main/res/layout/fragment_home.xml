@@ -65,7 +65,7 @@
         android:layout_width="328dp"
         android:layout_height="97dp"
         android:layout_marginStart="41dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="52dp"
         android:layout_marginEnd="42dp"
         app:cornerRadius="30dp"
         android:backgroundTint="#0578DB"
@@ -78,8 +78,8 @@
 
     <ImageView
         android:id="@+id/homelogo"
-        android:layout_width="245dp"
-        android:layout_height="213dp"
+        android:layout_width="260dp"
+        android:layout_height="182dp"
         android:layout_marginStart="86dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="86dp"
@@ -99,4 +99,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/homelogo" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
