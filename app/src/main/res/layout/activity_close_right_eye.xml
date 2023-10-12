@@ -37,11 +37,12 @@
 
     <Button
         android:id="@+id/cbCloseRightButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
         android:backgroundTint="#0F1056"
         android:gravity="center"
         android:text="Continue"
+        app:cornerRadius="30dp"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

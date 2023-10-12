@@ -1,4 +1,5 @@
 import android.graphics.PointF
+import com.example.eyeqtest.blinkingrouting.EyesActivity
 import com.example.eyeqtest.blinkingrouting.EyesGraphics
 import com.example.eyeqtest.blinkingrouting.GraphicOverlay
 import com.google.android.gms.vision.Detector
@@ -20,6 +21,7 @@ class FaceTracker(
     private var totalClosedEyesCount = 0
     private var lastBlinkResetTime = 0L
 
+
     override fun onNewItem(id: Int, face: Face?) {
         lastBlinkResetTime = System.currentTimeMillis()
     }
@@ -40,9 +42,10 @@ class FaceTracker(
             lastBlinkTime = currentTime
             blinkCountCallback(totalClosedEyesCount)
         }
-
         // Reset blink count after a certain delay
     }
+
+
 
     override fun onMissing(detectionResults: Detector.Detections<Face>?) {}
 
@@ -50,6 +53,7 @@ class FaceTracker(
         totalClosedEyesCount = 0
         lastBlinkResetTime = System.currentTimeMillis()
     }
+
 
     private fun updatePreviousProportions(face: Face?) {
         face?.landmarks?.forEach { landmark ->

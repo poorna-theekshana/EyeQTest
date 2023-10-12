@@ -44,6 +44,7 @@
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
             android:text="Answer 1"
+            app:cornerRadius="30dp"
             android:backgroundTint="#0F1056"
             android:textColor="@color/white"
             android:textSize="16sp" />
@@ -56,6 +57,7 @@
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
             android:text="Answer 2"
+            app:cornerRadius="30dp"
             android:backgroundTint="#0F1056"
             android:textColor="@color/white"
             android:textSize="16sp" />
@@ -69,6 +71,7 @@
             android:layout_marginTop="32dp"
             android:layout_marginEnd="30dp"
             android:text="Answer 3"
+            app:cornerRadius="30dp"
             android:backgroundTint="#0F1056"
             android:textColor="@color/white"
             android:textSize="16sp" />
@@ -82,6 +85,7 @@
             android:layout_marginTop="32dp"
             android:layout_marginEnd="30dp"
             android:text="Answer 4"
+            app:cornerRadius="30dp"
             android:backgroundTint="#0F1056"
             android:textColor="@color/white"
             android:textSize="16sp" />

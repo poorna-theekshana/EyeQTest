@@ -1,0 +1,45 @@
+<!-- congratulations_dialog.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/congratulationsTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Congratulations!"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/congratulationsMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="You blinked 100 times! Well done!"
+        android:layout_marginTop="16dp"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/okButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Go eye warmup exercises"
+        android:layout_marginTop="16dp"
+        android:background="?attr/colorAccent"
+        android:textColor="#FFFFFF"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/restartButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Restart"
+        android:layout_marginTop="16dp"
+        android:background="?attr/colorAccent"
+        android:textColor="#FFFFFF"
+        android:gravity="center"/>
+
+</LinearLayout>

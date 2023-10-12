@@ -61,12 +61,13 @@
 
     <Button
         android:id="@+id/normal_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
         android:layout_marginTop="40dp"
         android:backgroundTint="#0F1056"
         android:gravity="center"
         android:text="Share Results"
+        app:cornerRadius="30dp"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -75,11 +76,12 @@
 
     <Button
         android:id="@+id/normal_button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
         android:backgroundTint="#0F1056"
         android:gravity="center"
         android:text="Back to Home"
+        app:cornerRadius="30dp"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
