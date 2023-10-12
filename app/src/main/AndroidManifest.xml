@@ -94,6 +94,9 @@
             android:name=".MacularDegeneration.MacularDegenerationResult"
             android:exported="false" />
         <activity
+            android:name=".MacularDegeneration.MacularDegenerationFail"
+            android:exported="false" />
+        <activity
             android:name=".MacularDegeneration.MacularDegenerationTest"
             android:exported="false" />
         <activity

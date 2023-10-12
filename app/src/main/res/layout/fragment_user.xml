@@ -23,17 +23,16 @@
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
-            android:layout_height="56dp"
-            android:layout_gravity="center"
-            android:layout_marginBottom="15dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="125sp"
             android:text="User Profile"
             android:textSize="30sp" />
     </FrameLayout>
 
     <ImageView
         android:id="@+id/your_image_view_id"
-        android:layout_width="135dp"
-        android:layout_height="114dp"
+        android:layout_width="105dp"
+        android:layout_height="72dp"
         android:src="@drawable/userp"
         app:layout_constraintBottom_toTopOf="@+id/scrollView"
         app:layout_constraintEnd_toEndOf="parent"
