@@ -18,31 +18,44 @@ class MacularDegenerationTestRight : AppCompatActivity() {
         val buttonNo = findViewById<Button>(R.id.btnNo)
         val buttonYes = findViewById<Button>(R.id.btnYes)
 
-        // Retrieve the userChoice variable from the previous activity
-        val userChoice = intent.getIntExtra("userChoice", 0)
+        // Retrieve the userChoice variable from the previous activity for both eyes
+        val firstChoice = intent.getIntExtra("firstChoice", 0)
+        val secondChoice = intent.getIntExtra("userChoice", 0)
 
         // Set click listeners for the "No" and "Yes" buttons
         buttonNo.setOnClickListener {
-            val secondChoice = userChoice + 1
-
-            if (secondChoice == 1) {
-                redirectToResultActivity()
+            // If both eyes are bad, show the bad result
+            if (firstChoice == 1 && secondChoice == 1) {
+                redirectToResultActivity("bad")
             } else {
-                onBackPressed()
+                // Otherwise, go to the fail activity
+                redirectToFailActivity()
             }
         }
 
         buttonYes.setOnClickListener {
-            onBackPressed()
+            // If both eyes are good, show the good result
+            if (firstChoice == 0 && secondChoice == 0) {
+                redirectToResultActivity("good")
+            } else {
+                // Otherwise, go to the fail activity
+                redirectToFailActivity()
+            }
         }
     }
-    private fun redirectToResultActivity() {
+
+    private fun redirectToResultActivity(result: String) {
         val intent = Intent(this, MacularDegenerationResult::class.java)
+        intent.putExtra("result", result)
+        startActivity(intent)
+    }
+
+    private fun redirectToFailActivity() {
+        val intent = Intent(this, MacularDegenerationFail::class.java)
         startActivity(intent)
     }
 
     override fun onBackPressed() {
-        val intent = Intent(this, MacularDegenerationFail::class.java)
-        startActivity(intent)
+        redirectToFailActivity()
     }
 }
