@@ -8,7 +8,7 @@
     tools:context=".ContrastSensivity.ContrastSensivityFront">
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/cbpageicon"
         android:layout_width="70dp"
         android:layout_height="115dp"
         android:layout_marginTop="10dp"
@@ -31,7 +31,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+        app:layout_constraintTop_toBottomOf="@+id/cbpageicon" />
 
     <TextView
         android:id="@+id/instructionsTextView"
