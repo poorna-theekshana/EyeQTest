@@ -1,10 +1,11 @@
-package com.example.eyeqtest.Modals
+package com.example.eyeqtest.Adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.eyeqtest.Modals.ColorBlindTestModal
 import com.example.eyeqtest.R
 
 class ColorBlindTestAdapter(private val testResults: List<ColorBlindTestModal>) :

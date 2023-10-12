@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.eyeqtest.Modals.ColorBlindTestAdapter
+import com.example.eyeqtest.Adapter.ColorBlindTestAdapter
 import com.example.eyeqtest.Modals.ColorBlindTestModal
 import com.example.eyeqtest.R
 import com.google.firebase.auth.FirebaseAuth
