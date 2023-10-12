@@ -2,16 +2,29 @@ package com.example.eyeqtest.ColorBlindTest
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.example.eyeqtest.Modals.ColorBlindTestModal
 import com.example.eyeqtest.R
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import java.util.*
 
 class ColorTestResults : AppCompatActivity() {
     private var  rightCorrectAnswers = 0
     private var LeftCorrectAnswers =0
+    private lateinit var time: String
+    private lateinit var date: String
+    private lateinit var Rcomment: String
+    private lateinit var Lcomment: String
+    private lateinit var firebaseAuth: FirebaseAuth
+    private lateinit var cbresult: ColorBlindTestModal
+    private lateinit var dbRef: DatabaseReference
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -155,9 +168,9 @@ class ColorTestResults : AppCompatActivity() {
 
             dbRef.child(testId).setValue(cbresult)
                 .addOnCompleteListener {
-                    Toast.makeText(requireContext(),"Data insterted Successfully", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Data inserted Successfully", Toast.LENGTH_SHORT).show()
                 }.addOnFailureListener { err ->
-                    Toast.makeText(requireContext(), "Error ${err.message}", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Error ${err.message}", Toast.LENGTH_SHORT).show()
                 }
         }
 
