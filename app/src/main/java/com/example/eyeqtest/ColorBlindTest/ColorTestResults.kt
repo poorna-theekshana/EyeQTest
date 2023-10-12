@@ -2,12 +2,12 @@ package com.example.eyeqtest.ColorBlindTest
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.SystemClock
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import android.widget.Toast
 import androidx.core.content.ContentProviderCompat.requireContext
 import com.example.eyeqtest.Modals.ColorBlindTestModal
@@ -108,6 +108,12 @@ class ColorTestResults : AppCompatActivity() {
         }
 
     }
+
+    override fun onBackPressed() {
+        // Lock back navigation
+        // Add code to prevent the user from going back
+    }
+
     private fun displayresultsleft(){
 
         if(LeftCorrectAnswers <= 2){

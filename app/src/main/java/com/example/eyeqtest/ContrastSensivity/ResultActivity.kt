@@ -1,13 +1,12 @@
 package com.example.eyeqtest.ContrastSensivity
 
-import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import com.example.eyeqtest.MainActivity
 import androidx.appcompat.app.AppCompatActivity
+import com.example.eyeqtest.MainActivity
 import com.example.eyeqtest.R
 
 class ResultActivity : AppCompatActivity() {
@@ -39,5 +38,10 @@ class ResultActivity : AppCompatActivity() {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
+    }
+
+    override fun onBackPressed() {
+        // Lock back navigation
+        // Add code to prevent the user from going back
     }
 }

@@ -1,5 +1,6 @@
 package com.example.eyeqtest
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -26,8 +27,7 @@ class UserFragment : Fragment() {
     private lateinit var email: TextView
     private lateinit var contactNumb: TextView
 
-
-
+    @SuppressLint("SuspiciousIndentation", "MissingInflatedId")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
