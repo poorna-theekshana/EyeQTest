@@ -16,6 +16,12 @@
         android:theme="@style/Theme.EyeQTest"
         tools:targetApi="31">
         <activity
+            android:name=".UserAccount.ViewResult"
+            android:exported="false" />
+        <activity
+            android:name=".UserAccount.EditUserAccount"
+            android:exported="false" />
+        <activity
             android:name=".WelcomePage.ResetPasswordPage"
             android:exported="false" />
         <activity
@@ -81,12 +87,9 @@
         <activity
             android:name=".ColorBlindTest.ColorBlindHome"
             android:exported="false" />
-
         <activity
             android:name=".focusshift.HiddenWordActivity"
             android:exported="false" />
-
-
         <activity
             android:name=".WelcomePage.WelcomePage"
             android:exported="true">
