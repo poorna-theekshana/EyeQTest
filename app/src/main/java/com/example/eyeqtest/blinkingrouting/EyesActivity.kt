@@ -15,6 +15,8 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
+import com.example.eyeqtest.EyewarmupFragmnet
+import com.example.eyeqtest.MainActivity
 import com.example.eyeqtest.R
 import com.example.eyeqtest.blinkingrouting.CameraSourcePreview
 import com.google.android.gms.common.ConnectionResult
@@ -34,10 +36,13 @@ class EyesActivity : AppCompatActivity() {
     private var mIsFrontFacing = true
     private var mCameraSource: CameraSource? = null
     private var congratulationDialogShown = false
+    private lateinit var faceTracker: FaceTracker
 
     private lateinit var faceOverlay: GraphicOverlay
     private lateinit var preview: CameraSourcePreview
     private lateinit var blinkCountTextView: TextView
+    private var blinkCountingActive = true
+
 
     private var blinkCount = 0
 
@@ -50,25 +55,33 @@ class EyesActivity : AppCompatActivity() {
         preview = findViewById(R.id.preview)
         blinkCountTextView = findViewById(R.id.blinkCountTextView)
 
+        faceTracker = FaceTracker(faceOverlay, blinkCountCallback)
 
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
             createCameraSource()
         } else {
             requestCameraPermission()
         }
+
+
     }
 
     private val blinkCountCallback: (Int) -> Unit = { count ->
         runOnUiThread {
-            blinkCount = count
-            blinkCountTextView.text = "Blink Count: $blinkCount"
+            if (blinkCountingActive) {
+                blinkCount = count
+                blinkCountTextView.text = "Blink Count: $blinkCount"
 
-            if (blinkCount >= 100 && !congratulationDialogShown) {
-                congratulationDialogShown = true
-                showCongratulationsDialog()
+                if (blinkCount >= 100 && !congratulationDialogShown) {
+                    congratulationDialogShown = true
+                    showCongratulationsDialog()
+                    blinkCountingActive = false
+                }
             }
         }
     }
+
+
 
 
     private val mFlipButtonListener = View.OnClickListener {
@@ -111,16 +124,44 @@ class EyesActivity : AppCompatActivity() {
         mCameraSource?.release()
     }
 
-    private fun showCongratulationsDialog() {
+    fun showCongratulationsDialog() {
+        val dialogView = layoutInflater.inflate(R.layout.congratulations_dialog, null)
+        val congratulationsTitle = dialogView.findViewById<TextView>(R.id.congratulationsTitle)
+        val congratulationsMessage = dialogView.findViewById<TextView>(R.id.congratulationsMessage)
+        val okButton = dialogView.findViewById<Button>(R.id.okButton)
+        val restartButton = dialogView.findViewById<Button>(R.id.restartButton)
+
+        congratulationsTitle.text = "Congratulations!"
+        congratulationsMessage.text = "You blinked 100 times! Well done!"
+
         val builder = AlertDialog.Builder(this)
-        builder.setTitle("Congratulations!")
-        builder.setMessage("You blinked 100 times! Well done!")
-        builder.setPositiveButton("OK") { _, _ ->
-            // Do something when the user clicks the "OK" button
-        }
+        builder.setView(dialogView)
+
         val dialog = builder.create()
-        dialog.show()
+
+        okButton.setOnClickListener {
+            dialog.dismiss()
+
+            val fragmentManager = supportFragmentManager
+            val transaction = fragmentManager.beginTransaction()
+            transaction.replace(R.id.fragmentContainerView3, EyewarmupFragmnet())
+            transaction.addToBackStack(null)
+            transaction.commit()
+        }
+
+
+        restartButton.setOnClickListener {
+            dialog.dismiss()
+            val mainActivityIntent = Intent(this@EyesActivity, EyesActivity::class.java)
+            startActivity(mainActivityIntent)
+            finish() // Optional: finish the current activity if needed
+
+        }
+
+            dialog.show()
     }
+
+
 
 
     private fun createFaceDetector(context: Context): FaceDetector {

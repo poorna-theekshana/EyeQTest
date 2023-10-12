@@ -1,6 +1,8 @@
 package com.example.eyeqtest
 
 import android.annotation.SuppressLint
+import android.app.PendingIntent
+import android.app.TaskStackBuilder
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -60,12 +62,19 @@ class HomeFragment : Fragment() {
         }
 
         uniqueFeatureBtn.setOnClickListener {
-            val intent = Intent(activity, EyesActivity::class.java)
-            startActivity(intent)
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.fragmentContainerView3, EyewarmupFragmnet())
+                .addToBackStack(null)
+                .commit()
         }
-        
+
+
         return view
     }
 
 
 }
+
+
+
+

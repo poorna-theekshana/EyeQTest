@@ -1,9 +1,9 @@
 package com.example.eyeqtest.WelcomePage
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.eyeqtest.MainActivity
 import com.example.eyeqtest.R
 import com.example.eyeqtest.databinding.ActivitySignInPageBinding
@@ -18,7 +18,7 @@ class SignInPage : AppCompatActivity() {
         setContentView(R.layout.activity_sign_in_page)
 
 
-        binding = ActivitySignInBinding.inflate(layoutInflater)
+        binding = ActivitySignInPageBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         firebaseAuth = FirebaseAuth.getInstance()
