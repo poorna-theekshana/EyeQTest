@@ -16,6 +16,18 @@
         android:theme="@style/Theme.EyeQTest"
         tools:targetApi="31">
         <activity
+            android:name=".UserAccount.ContrastRecords"
+            android:exported="false" />
+        <activity
+            android:name=".UserAccount.MacularRecords"
+            android:exported="false" />
+        <activity
+            android:name=".UserAccount.AsigmatismRecords"
+            android:exported="false" />
+        <activity
+            android:name=".UserAccount.ColorBlindProfileRecords"
+            android:exported="false" />
+        <activity
             android:name=".UserAccount.ViewResult"
             android:exported="false" />
         <activity

@@ -168,7 +168,7 @@ class ColorTestResults : AppCompatActivity() {
 
             dbRef.child(testId).setValue(cbresult)
                 .addOnCompleteListener {
-                    Toast.makeText(this, "Data inserted Successfully", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Data inserted to profile Successfully", Toast.LENGTH_LONG).show()
                 }.addOnFailureListener { err ->
                     Toast.makeText(this, "Error ${err.message}", Toast.LENGTH_SHORT).show()
                 }
