@@ -3,20 +3,17 @@ package com.example.eyeqtest.ColorBlindTest
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
-import android.os.SystemClock
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
 import android.widget.Toast
-import androidx.core.content.ContentProviderCompat.requireContext
+import androidx.appcompat.app.AppCompatActivity
 import com.example.eyeqtest.Modals.ColorBlindTestModal
 import com.example.eyeqtest.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.core.Context
-import java.util.Calendar
+import java.util.*
 
 class ColorTestResults : AppCompatActivity() {
     private var  rightCorrectAnswers = 0
@@ -171,9 +168,9 @@ class ColorTestResults : AppCompatActivity() {
 
             dbRef.child(testId).setValue(cbresult)
                 .addOnCompleteListener {
-                    Toast.makeText(requireContext(),"Data insterted Successfully", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Data inserted Successfully", Toast.LENGTH_SHORT).show()
                 }.addOnFailureListener { err ->
-                    Toast.makeText(requireContext(), "Error ${err.message}", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Error ${err.message}", Toast.LENGTH_SHORT).show()
                 }
         }
 
