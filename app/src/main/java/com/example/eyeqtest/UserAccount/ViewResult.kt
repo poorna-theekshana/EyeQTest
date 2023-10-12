@@ -23,15 +23,15 @@ class ViewResult : AppCompatActivity() {
             startActivity(intent)
         }
         asigT.setOnClickListener {
-            val intent = Intent(this,ColorBlindProfileRecords::class.java)
+            val intent = Intent(this,AsigmatismRecords::class.java)
             startActivity(intent)
         }
         contrstT.setOnClickListener {
-            val intent = Intent(this,ColorBlindProfileRecords::class.java)
+            val intent = Intent(this,ContrastSensitivityProfileRecords::class.java)
             startActivity(intent)
         }
         macularT.setOnClickListener {
-            val intent = Intent(this,ColorBlindProfileRecords::class.java)
+            val intent = Intent(this,MacularRecords::class.java)
             startActivity(intent)
         }
     }

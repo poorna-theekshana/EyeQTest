@@ -4,19 +4,19 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.eyeqtest.Adapter.AstigmatismTestAdapter
-import com.example.eyeqtest.Modals.AstigmatismTestModal
+import com.example.eyeqtest.Adapter.ContrastSensitivityTestAdapter
+import com.example.eyeqtest.Modals.ContrastSensivityTestModal
 import com.example.eyeqtest.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 
-class AsigmatismRecords : AppCompatActivity() {
+class ContrastSensitivityProfileRecords : AppCompatActivity() {
 
-    private lateinit var cbresult: ArrayList<AstigmatismTestModal>
+    private lateinit var cbresult: ArrayList<ContrastSensivityTestModal>
     private lateinit var dbRef: DatabaseReference
     private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var recordRecyclerView: RecyclerView
-    private lateinit var recordAdapter: AstigmatismTestAdapter// Create your custom adapter
+    private lateinit var recordAdapter: ContrastSensitivityTestAdapter// Create your custom adapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,7 +26,7 @@ class AsigmatismRecords : AppCompatActivity() {
         recordRecyclerView = findViewById(R.id.recordRecyclerView)
         recordRecyclerView.layoutManager = LinearLayoutManager(this)
 
-        recordAdapter = AstigmatismTestAdapter(cbresult) // Create your custom adapter
+        recordAdapter = ContrastSensitivityTestAdapter(cbresult) // Create your custom adapter
         recordRecyclerView.adapter = recordAdapter
 
         getresults()
@@ -38,13 +38,13 @@ class AsigmatismRecords : AppCompatActivity() {
         firebaseAuth.currentUser?.let {
             userId = it.uid
         }
-        dbRef = FirebaseDatabase.getInstance().getReference("AstigmatismTest")
+        dbRef = FirebaseDatabase.getInstance().getReference("ContrastSensitivityTest")
         dbRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 cbresult.clear()
                 if (snapshot.exists()) {
                     for (cbResultsSnap in snapshot.children) {
-                        val cbResults = cbResultsSnap.getValue(AstigmatismTestModal::class.java)
+                        val cbResults = cbResultsSnap.getValue(ContrastSensivityTestModal::class.java)
                         if (cbResults?.userId == userId) {
                             cbresult.add(cbResults!!)
                         }
