@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.eyeqtest">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.CAMERA" />
+
     <uses-feature android:name="android.hardware.camera" />
 
     <application
@@ -15,6 +15,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EyeQTest"
         tools:targetApi="31">
+        <activity
+            android:name=".HandEyeCoordination.HandEYETest"
+            android:exported="false" />
+        <activity
+            android:name=".HandEyeCoordination.HandEyeCoResults"
+            android:exported="false" />
+        <activity
+            android:name=".HandEyeCoordination.HandEyeCoordinationTest"
+            android:exported="false" />
+        <activity
+            android:name=".HandEyeCoordination.HiCloseLeftEye"
+            android:exported="false" />
+        <activity
+            android:name=".HandEyeCoordination.HiCloseRightEye"
+            android:exported="false" />
+        <activity
+            android:name=".HandEyeCoordination.HandEyeCoordinationHome"
+            android:exported="false" />
         <activity
             android:name=".Astigmatism.Astigmatism"
             android:exported="false" />
