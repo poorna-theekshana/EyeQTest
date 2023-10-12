@@ -1,9 +1,9 @@
 package com.example.eyeqtest.Astigmatism
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 import com.example.eyeqtest.MainActivity
 import com.example.eyeqtest.R
 
@@ -27,5 +27,10 @@ class AstigmatismFail : AppCompatActivity() {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
+    }
+
+    override fun onBackPressed() {
+        // Lock back navigation
+        // Add code to prevent the user from going back
     }
 }
