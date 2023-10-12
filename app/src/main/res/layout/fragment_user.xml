@@ -50,7 +50,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/userpagedivider2"
-        app:layout_constraintVertical_bias="0.134" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/viewResults"
@@ -93,7 +93,7 @@
         android:id="@+id/useremailtxt"
         android:layout_width="126dp"
         android:layout_height="44dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="12dp"
         android:gravity="center"
         android:text="Email"
         android:textColor="#090909"
