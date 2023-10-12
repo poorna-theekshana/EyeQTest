@@ -6,4 +6,48 @@
     android:layout_height="match_parent"
     tools:context=".UserAccount.ViewResult">
 
+    <Button
+        android:id="@+id/color_test"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Color Test"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.288" />
+
+    <Button
+        android:id="@+id/asig_test"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Asig Test"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/color_test"
+        app:layout_constraintVertical_bias="0.096" />
+
+    <Button
+        android:id="@+id/contrast_test"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Contrast Test"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/asig_test"
+        app:layout_constraintVertical_bias="0.113" />
+
+    <Button
+        android:id="@+id/macular_test"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Macular Test"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contrast_test"
+        app:layout_constraintVertical_bias="0.138" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
