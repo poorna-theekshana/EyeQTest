@@ -22,9 +22,6 @@
             android:name=".HandEyeCoordination.HandEyeCoResults"
             android:exported="false" />
         <activity
-            android:name=".HandEyeCoordination.HandEyeCoordinationTest"
-            android:exported="false" />
-        <activity
             android:name=".HandEyeCoordination.HiCloseLeftEye"
             android:exported="false" />
         <activity
