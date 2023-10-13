@@ -10,15 +10,19 @@
     android:background="@drawable/background">
 
     <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="500dp"
-        android:layout_height="108dp"
-        android:scaleType="centerCrop"
-        android:layout_gravity="center"
-        android:src="@drawable/ic_blue_button"
+        android:id="@+id/imageView4"
+        android:layout_width="822dp"
+        android:layout_height="553dp"
+        android:layout_marginBottom="50dp"
+        android:background="#00FFFFFF"
+
+        android:fadingEdge="horizontal|vertical"
+        android:fadingEdgeLength="1000dp"
+        android:requiresFadingEdge="horizontal|vertical"
+        android:src="@drawable/baseline_circle_24"
+        app:layout_constraintBottom_toTopOf="@+id/useremailtxt"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/usernametxt"
@@ -27,7 +31,7 @@
         android:layout_marginTop="4dp"
         android:gravity="center"
         android:textColor="#090909"
-        android:textSize="20sp"
+        android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -35,42 +39,24 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/addprojectbtn"
-        android:layout_width="114dp"
-        android:layout_height="78dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="24dp"
-        android:backgroundTint="@color/grey1"
-        android:gravity="center"
-        android:text="add projects"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/viewprojectsbtn"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userpagedivider2"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
         android:id="@+id/viewResults"
-        android:layout_width="114dp"
-        android:layout_height="78dp"
+        android:layout_width="129dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="16dp"
         android:backgroundTint="@color/grey1"
         android:gravity="center"
         android:text="My results"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.278"
-        app:layout_constraintStart_toEndOf="@+id/addprojectbtn"
-        app:layout_constraintTop_toTopOf="@+id/addprojectbtn" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userpagedivider2" />
 
     <View
         android:id="@+id/userpagedivider2"
         android:layout_width="409dp"
         android:layout_height="1dp"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="1dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
@@ -82,12 +68,11 @@
         android:id="@+id/imageView"
         android:layout_width="162dp"
         android:layout_height="158dp"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="10dp"
         android:src="@drawable/navbar_user"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView8" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/useremailtxt"
@@ -97,6 +82,7 @@
         android:gravity="center"
         android:text="Email"
         android:textColor="#090909"
+        android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/useremail"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -107,6 +93,7 @@
         android:layout_width="153dp"
         android:layout_height="56dp"
         android:gravity="center"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/useremailtxt"
@@ -117,6 +104,7 @@
         android:layout_width="155dp"
         android:layout_height="44dp"
         android:gravity="center"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/usercitytxt"
@@ -127,6 +115,7 @@
         android:layout_width="155dp"
         android:layout_height="44dp"
         android:gravity="center"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/userteletxt"
@@ -137,6 +126,7 @@
         android:layout_width="155dp"
         android:layout_height="44dp"
         android:gravity="center"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/userstatustxt"
@@ -150,6 +140,7 @@
         android:gravity="center"
         android:text="Website"
         android:textColor="#090909"
+        android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/userstatus"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -163,6 +154,7 @@
         android:gravity="center"
         android:text="Contact no"
         android:textColor="#090909"
+        android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/usertele"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -176,6 +168,7 @@
         android:gravity="center"
         android:text="City"
         android:textColor="#090909"
+        android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/usercity"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -185,14 +178,16 @@
         android:id="@+id/logout_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
         android:backgroundTint="@color/grey1"
-        android:textColor="@color/black"
         android:gravity="center"
         android:text="@string/logout_btn"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewResults"
+        app:layout_constraintVertical_bias="0.123" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
