@@ -7,15 +7,24 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.eyeqtest.Astigmatism.AstigmatismFront
 import com.example.eyeqtest.ColorBlindTest.ColorBlindHome
 import com.example.eyeqtest.ContrastSensivity.ContrastSensivityFront
 import com.example.eyeqtest.HandEyeCoordination.HandEyeCoordinationHome
 import com.example.eyeqtest.MacularDegeneration.MacularDegenerationFront
+import com.example.eyeqtest.Modals.ColorBlindTestModal
+import com.example.eyeqtest.Modals.NewsletterModal
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
 class HomeFragment : Fragment() {
     private var backNavigationLocked = false // Flag to lock back navigation
+    private lateinit var firebaseAuth: FirebaseAuth
+    private lateinit var dbRef: DatabaseReference
+    private lateinit var cbresult: NewsletterModal
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,12 +37,9 @@ class HomeFragment : Fragment() {
         val masculartest = view.findViewById<Button>(R.id.mascularTestBtn)
         val contrastsentest = view.findViewById<Button>(R.id.contrastTestBtn)
         val uniqueFeatureBtn = view.findViewById<Button>(R.id.uniqueFeatureBtn)
-        val hand = view.findViewById<TextView>(R.id.textView2)
 
-        hand.setOnClickListener{
-            val intent = Intent(activity, HandEyeCoordinationHome::class.java)
-            startActivity(intent)
-        }
+
+
 
         colorblindtest.setOnClickListener {
             val intent = Intent(activity, ColorBlindHome::class.java)
@@ -73,6 +79,8 @@ class HomeFragment : Fragment() {
     fun onBackPressed(): Boolean {
         return backNavigationLocked
     }
+
+
 }
 
 
