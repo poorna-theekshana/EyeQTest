@@ -7,9 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
-
 import com.example.eyeqtest.blinkingrouting2.EyesActivity2
 import com.example.eyeqtest.blinkingrouting3.EyesActivity3
+import com.example.eyeqtest.focusshift2.HiddenWordActivity2
 
 import com.example.eyeqtest.ContrastSensivity.ContrastSensivityFront
 import com.example.eyeqtest.HandEyeCoordination.HandEyeCoordinationHome
@@ -44,18 +44,13 @@ class EyewarmupFragmnet : Fragment() {
              startActivity(intent)
         }
 
+        Focusshifts.setOnClickListener {
+            val intent = Intent(activity, HiddenWordActivity2::class.java)
+            startActivity(intent)
+        }
+
         eyeyoga.setOnClickListener {
             val intent = Intent(activity, EyesActivity2::class.java)
-            startActivity(intent)
-        }
-
-        Focusshifts.setOnClickListener {
-            val intent = Intent(activity, HiddenWordActivity::class.java)
-            startActivity(intent)
-        }
-
-        handeye.setOnClickListener{
-            val intent = Intent(activity,HandEyeCoordinationHome::class.java)
             startActivity(intent)
         }
 

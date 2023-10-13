@@ -106,6 +106,9 @@
             android:name=".focusshift.HiddenWordActivity"
             android:exported="false" />
         <activity
+            android:name=".focusshift2.HiddenWordActivity2"
+            android:exported="false" />
+        <activity
             android:name=".WelcomePage.WelcomePage"
             android:exported="true">
             <intent-filter>
