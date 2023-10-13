@@ -1,10 +1,10 @@
 package com.example.eyeqtest
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.eyeqtest.Adapter.NewsletterAdapter
@@ -33,7 +33,9 @@ class NewsletterFragment : Fragment() {
 
         getresults()
 
+        return view
     }
+
     private fun getresults() {
         firebaseAuth = FirebaseAuth.getInstance()
         dbRef = FirebaseDatabase.getInstance().getReference("Newsletter")
@@ -43,8 +45,7 @@ class NewsletterFragment : Fragment() {
                 if (snapshot.exists()) {
                     for (newsletterSnap in snapshot.children) {
                         val newsletterL = newsletterSnap.getValue(NewsletterModal::class.java)
-                            newsletter.add(newsletterL!!)
-
+                        newsletter.add(newsletterL!!)
                     }
                     recyclerView.adapter?.notifyDataSetChanged()
                 }
