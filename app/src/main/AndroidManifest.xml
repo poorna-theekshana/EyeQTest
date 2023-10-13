@@ -144,6 +144,10 @@
             android:exported="false" />
 
         <activity
+            android:name=".blinkingrouting3.EyesActivity3"
+            android:exported="false" />
+
+        <activity
             android:name=".blinkingrouting.EyesActivity"
             android:exported="false" />
 

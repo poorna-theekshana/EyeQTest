@@ -1,4 +1,4 @@
-package com.example.eyeqtest.blinkingrouting2
+package com.example.eyeqtest.blinkingrouting3
 
 import android.Manifest
 import android.content.Context
@@ -14,14 +14,14 @@ import com.google.android.gms.common.images.Size
 import com.google.android.gms.vision.CameraSource
 import java.io.IOException
 
-class CameraSourcePreview2(context: Context, attrs: AttributeSet) : ViewGroup(context, attrs) {
+class CameraSourcePreview3(context: Context, attrs: AttributeSet) : ViewGroup(context, attrs) {
     private val TAG = "CameraSourcePreview"
     private val mContext: Context = context
     private var mSurfaceView: SurfaceView = SurfaceView(context)
     private var mStartRequested = false
     private var mSurfaceAvailable = false
     private var mCameraSource: CameraSource? = null
-    private var mOverlay: GraphicOverlay2? = null
+    private var mOverlay: GraphicOverlay3? = null
 
     init {
         mSurfaceView.holder.addCallback(SurfaceCallback())
@@ -41,7 +41,7 @@ class CameraSourcePreview2(context: Context, attrs: AttributeSet) : ViewGroup(co
     }
 
     @Throws(IOException::class)
-    fun start(cameraSource: CameraSource, overlay: GraphicOverlay2) {
+    fun start(cameraSource: CameraSource, overlay: com.example.eyeqtest.blinkingrouting3.GraphicOverlay3) {
         mOverlay = overlay
         start(cameraSource)
     }

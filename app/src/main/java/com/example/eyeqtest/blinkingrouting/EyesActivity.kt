@@ -14,7 +14,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
-import com.example.eyeqtest.EyewarmupFragmnet
+import com.example.eyeqtest.HandEyeCoordination.HandEyeCoordinationHome
 import com.example.eyeqtest.R
 import com.google.android.gms.common.ConnectionResult
 import com.google.android.gms.common.GoogleApiAvailability
@@ -141,12 +141,10 @@ class EyesActivity : AppCompatActivity() {
 
         okButton.setOnClickListener {
             dialog.dismiss()
+            val mainActivityIntent = Intent(this@EyesActivity, HandEyeCoordinationHome::class.java)
+            startActivity(mainActivityIntent)
+            finish()
 
-            val fragmentManager = supportFragmentManager
-            val transaction = fragmentManager.beginTransaction()
-            transaction.replace(R.id.fragmentContainerView3, EyewarmupFragmnet())
-            transaction.addToBackStack(null)
-            transaction.commit()
         }
 
 

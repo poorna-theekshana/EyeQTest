@@ -7,8 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
-import com.example.eyeqtest.blinkingrouting.EyesActivity
 import com.example.eyeqtest.blinkingrouting2.EyesActivity2
+import com.example.eyeqtest.blinkingrouting3.EyesActivity3
 import com.example.eyeqtest.focusshift.HiddenWordActivity
 
 class EyewarmupFragmnet : Fragment() {
@@ -26,7 +26,7 @@ class EyewarmupFragmnet : Fragment() {
         val eyeyoga = view.findViewById<Button>(R.id.eyeyoga)
 
         eyeblinking.setOnClickListener {
-             val intent = Intent(activity, EyesActivity::class.java)
+             val intent = Intent(activity, EyesActivity3::class.java)
              startActivity(intent)
         }
 

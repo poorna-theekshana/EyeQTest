@@ -6,19 +6,19 @@
     android:layout_height="match_parent"
     android:keepScreenOn="true"
     android:orientation="vertical"
-    tools:context=".blinkingrouting2.EyesActivity3">
+    tools:context=".blinkingrouting3.EyesActivity3.EyesActivity3">
 
-    <com.example.eyeqtest.blinkingrouting2.CameraSourcePreview2
+    <com.example.eyeqtest.blinkingrouting3.CameraSourcePreview3
         android:id="@+id/preview"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.example.eyeqtest.blinkingrouting2.GraphicOverlay2
+        <com.example.eyeqtest.blinkingrouting3.GraphicOverlay3
             android:id="@+id/faceOverlay"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-    </com.example.eyeqtest.blinkingrouting2.CameraSourcePreview2>
+    </com.example.eyeqtest.blinkingrouting3.CameraSourcePreview3>
 
     <TextView
         android:id="@+id/blinkCountTextView"
