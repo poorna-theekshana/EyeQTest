@@ -12,6 +12,8 @@ import android.widget.ImageButton
 import androidx.databinding.DataBindingUtil.setContentView
 import androidx.fragment.app.Fragment
 import com.example.eyeqtest.ContrastSensivity.ContrastSensivityFront
+import com.example.eyeqtest.HandEyeCoordination.HandEyeCoordinationHome
+import com.example.eyeqtest.blinkingrouting.BlinkingFront
 import com.example.eyeqtest.blinkingrouting.EyesActivity
 import com.example.eyeqtest.focusshift.HiddenWordActivity
 
@@ -27,14 +29,20 @@ class EyewarmupFragmnet : Fragment() {
 
         val eyeblinking = view.findViewById<Button>(R.id.eyeblinking)
         val Focusshifts = view.findViewById<Button>(R.id.Focusshifts)
+        val handeye = view.findViewById<Button>(R.id.handeyecoordiation)
 
         eyeblinking.setOnClickListener {
-             val intent = Intent(activity, EyesActivity::class.java)
+             val intent = Intent(activity, BlinkingFront::class.java)
              startActivity(intent)
         }
 
         Focusshifts.setOnClickListener {
             val intent = Intent(activity, HiddenWordActivity::class.java)
+            startActivity(intent)
+        }
+
+        handeye.setOnClickListener{
+            val intent = Intent(activity,HandEyeCoordinationHome::class.java)
             startActivity(intent)
         }
 
