@@ -4,35 +4,106 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".HandEyeCoordination.HandEyeCoResults">
 
     <TextView
-        android:id="@+id/RightEyeHIResult"
+        android:id="@+id/Result"
+        android:layout_width="256dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="64dp"
+        android:gravity="center"
+        android:text="Average Response time of a healthy person"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ResultValue"
         android:layout_width="200dp"
         android:layout_height="66dp"
-        android:layout_marginStart="112dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="99dp"
-        android:layout_marginBottom="309dp"
         android:gravity="center"
-        android:text="TextView"
+        android:text="0.5s - 0.6s"
+        android:textColor="#0C0C0C"
         android:textSize="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LeftEyeHIResult" />
+        app:layout_constraintTop_toBottomOf="@+id/Result" />
+
+    <TextView
+        android:id="@+id/LeftEyeHI"
+        android:layout_width="200dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Left Eye"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RightEyeHIResult" />
 
     <TextView
         android:id="@+id/LeftEyeHIResult"
         android:layout_width="158dp"
         android:layout_height="64dp"
-        android:layout_marginStart="114dp"
-        android:layout_marginTop="252dp"
-        android:layout_marginEnd="139dp"
         android:gravity="center"
         android:text="TextView"
+        android:textColor="#0C0C0C"
         android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/LeftEyeHI" />
+
+    <TextView
+        android:id="@+id/RightEyeHI"
+        android:layout_width="200dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="Right Eye"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ResultValue" />
+
+    <TextView
+        android:id="@+id/RightEyeHIResult"
+        android:layout_width="200dp"
+        android:layout_height="66dp"
+        android:gravity="center"
+        android:text="TextView"
+        android:textColor="#0C0C0C"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RightEyeHI" />
+
+    <Button
+        android:id="@+id/close_blink"
+        android:layout_width="186dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#0F1056"
+        android:gravity="center"
+        android:text="Close"
+        android:textColor="@color/white"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LeftEyeHIResult"
+        app:layout_constraintVertical_bias="0.25" />
+    " />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

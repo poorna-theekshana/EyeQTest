@@ -14,14 +14,14 @@ class HiCloseLeftEye : AppCompatActivity() {
         setContentView(R.layout.activity_close_left_eye)
 
         val pgnumber = 1
-        val reye = intent.getLongExtra("righteye",0)
+        val leye = intent.getLongExtra("lefteye",0)
 
         val continueBtn = findViewById<Button>(R.id.cbCloseRightButton)
 
         continueBtn.setOnClickListener {
             val intent = Intent(this, HandEYETest::class.java)
             intent.putExtra("pgdirector",pgnumber)
-            intent.putExtra("righteye",reye)
+            intent.putExtra("lefteye",leye)
             startActivity(intent)
         }
     }
