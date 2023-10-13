@@ -1,4 +1,4 @@
-package com.example.eyeqtest.blinkingrouting
+package com.example.eyeqtest.blinkingrouting2
 
 import android.content.Context
 import android.graphics.Canvas
@@ -6,7 +6,7 @@ import android.util.AttributeSet
 import android.view.View
 import com.google.android.gms.vision.CameraSource
 
-class GraphicOverlay(context: Context, attrs: AttributeSet) : View(context, attrs) {
+class GraphicOverlay2(context: Context, attrs: AttributeSet) : View(context, attrs) {
     private val mLock = Any()
     private var mPreviewWidth = 0
     private var mWidthScaleFactor = 1.0f
@@ -15,7 +15,7 @@ class GraphicOverlay(context: Context, attrs: AttributeSet) : View(context, attr
     private var mFacing = CameraSource.CAMERA_FACING_BACK
     private val mGraphics: MutableSet<Graphic> = HashSet()
 
-    abstract class Graphic(protected val mOverlay: GraphicOverlay) {
+    abstract class Graphic(protected val mOverlay: GraphicOverlay2) {
         abstract fun draw(canvas: Canvas)
 
         fun scaleX(horizontal: Float): Float {
