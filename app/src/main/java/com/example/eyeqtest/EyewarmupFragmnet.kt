@@ -7,21 +7,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
+import com.example.eyeqtest.HandEyeCoordination.HandEyeCoordinationHome
 import com.example.eyeqtest.blinkingrouting2.EyesActivity2
 import com.example.eyeqtest.blinkingrouting3.EyesActivity3
 import com.example.eyeqtest.focusshift2.HiddenWordActivity2
 
-import com.example.eyeqtest.ContrastSensivity.ContrastSensivityFront
-import com.example.eyeqtest.HandEyeCoordination.HandEyeCoordinationHome
-import com.example.eyeqtest.blinkingrouting.BlinkingFront
-import com.example.eyeqtest.blinkingrouting.EyesActivity
-
-import com.example.eyeqtest.focusshift.HiddenWordActivity
-
 class EyewarmupFragmnet : Fragment() {
 
     override fun onCreateView(
-
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
@@ -30,18 +23,12 @@ class EyewarmupFragmnet : Fragment() {
 
         val eyeblinking = view.findViewById<Button>(R.id.eyeblinking)
         val Focusshifts = view.findViewById<Button>(R.id.Focusshifts)
-
         val eyeyoga = view.findViewById<Button>(R.id.eyeyoga)
-
-        eyeblinking.setOnClickListener {
-             val intent = Intent(activity, EyesActivity3::class.java)
-
         val handeye = view.findViewById<Button>(R.id.handeyecoordiation)
 
         eyeblinking.setOnClickListener {
-             val intent = Intent(activity, BlinkingFront::class.java)
-
-             startActivity(intent)
+            val intent = Intent(activity, EyesActivity3::class.java)
+            startActivity(intent)
         }
 
         Focusshifts.setOnClickListener {
@@ -54,8 +41,11 @@ class EyewarmupFragmnet : Fragment() {
             startActivity(intent)
         }
 
+        handeye.setOnClickListener {
+            val intent = Intent(activity, HandEyeCoordinationHome::class.java)
+            startActivity(intent)
+        }
 
         return view
     }
-
 }
