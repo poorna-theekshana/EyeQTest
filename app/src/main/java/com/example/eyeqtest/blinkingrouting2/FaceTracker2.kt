@@ -1,4 +1,4 @@
-package com.example.eyeqtest.blinkingrouting
+package com.example.eyeqtest.blinkingrouting2
 
 import android.graphics.PointF
 import android.os.Handler
@@ -9,8 +9,8 @@ import com.google.android.gms.vision.Detector
 import com.google.android.gms.vision.Tracker
 import com.google.android.gms.vision.face.Face
 
-class FaceTracker(
-    private val mOverlay: GraphicOverlay,
+class FaceTracker2(
+    private val mOverlay: GraphicOverlay2,
     private val blinkCountCallback: (Int) -> Unit,
     private val pleaseShowFaceTextView: TextView
 ) : Tracker<Face>() {

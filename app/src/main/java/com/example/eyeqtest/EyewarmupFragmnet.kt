@@ -1,18 +1,14 @@
 package com.example.eyeqtest
 
-import android.annotation.SuppressLint
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.ImageButton
-import androidx.databinding.DataBindingUtil.setContentView
 import androidx.fragment.app.Fragment
-import com.example.eyeqtest.ContrastSensivity.ContrastSensivityFront
 import com.example.eyeqtest.blinkingrouting.EyesActivity
+import com.example.eyeqtest.blinkingrouting2.EyesActivity2
 import com.example.eyeqtest.focusshift.HiddenWordActivity
 
 class EyewarmupFragmnet : Fragment() {
@@ -27,10 +23,16 @@ class EyewarmupFragmnet : Fragment() {
 
         val eyeblinking = view.findViewById<Button>(R.id.eyeblinking)
         val Focusshifts = view.findViewById<Button>(R.id.Focusshifts)
+        val eyeyoga = view.findViewById<Button>(R.id.eyeyoga)
 
         eyeblinking.setOnClickListener {
              val intent = Intent(activity, EyesActivity::class.java)
              startActivity(intent)
+        }
+
+        eyeyoga.setOnClickListener {
+            val intent = Intent(activity, EyesActivity2::class.java)
+            startActivity(intent)
         }
 
         Focusshifts.setOnClickListener {

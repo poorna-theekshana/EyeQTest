@@ -2,6 +2,7 @@ package com.example.eyeqtest.focusshift
 
 import android.app.AlertDialog
 import android.app.Dialog
+import android.content.Intent
 import android.os.Bundle
 import android.text.Spannable
 import android.text.SpannableString
@@ -14,8 +15,8 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
-import com.example.eyeqtest.EyewarmupFragmnet
 import com.example.eyeqtest.R
+import com.example.eyeqtest.blinkingrouting.EyesActivity
 import java.util.*
 import kotlin.concurrent.schedule
 
@@ -266,12 +267,10 @@ class HiddenWordActivity : AppCompatActivity(), View.OnTouchListener {
 
         dialogView.findViewById<Button>(R.id.okButton).setOnClickListener {
             congratsDialog.dismiss()
-            val eyewarmupFragment = EyewarmupFragmnet()
-            val fragmentManager = supportFragmentManager
-            val transaction = fragmentManager.beginTransaction()
-            transaction.replace(R.id.fragmentContainerView3, eyewarmupFragment)
-            transaction.addToBackStack(null)
-            transaction.commit()
+            val mainActivityIntent = Intent(this@HiddenWordActivity, EyesActivity::class.java)
+            startActivity(mainActivityIntent)
+            finish()
+
         }
         congratsDialog.setContentView(dialogView)
         congratsDialog.setCancelable(false)

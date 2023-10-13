@@ -1,4 +1,4 @@
-package com.example.eyeqtest.blinkingrouting
+package com.example.eyeqtest.blinkingrouting2
 
 import android.Manifest
 import android.content.Context
@@ -14,8 +14,8 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
-import com.example.eyeqtest.EyewarmupFragmnet
 import com.example.eyeqtest.R
+import com.example.eyeqtest.focusshift.HiddenWordActivity
 import com.google.android.gms.common.ConnectionResult
 import com.google.android.gms.common.GoogleApiAvailability
 import com.google.android.gms.vision.CameraSource
@@ -27,18 +27,18 @@ import com.google.android.gms.vision.face.LargestFaceFocusingProcessor
 import com.google.android.material.snackbar.Snackbar
 import java.io.IOException
 
-class EyesActivity : AppCompatActivity() {
+class EyesActivity2 : AppCompatActivity() {
     private val TAG = "GooglyEyes"
     private val RC_HANDLE_CAMERA_PERM = 2
     private var mIsFrontFacing = true
     private var mCameraSource: CameraSource? = null
     private var congratulationDialogShown = false
-    private lateinit var faceTracker: FaceTracker
+    private lateinit var faceTracker2: FaceTracker2
     private lateinit var pleaseShowFaceTextView: TextView
 
 
-    private lateinit var faceOverlay: GraphicOverlay
-    private lateinit var preview: CameraSourcePreview
+    private lateinit var faceOverlay: GraphicOverlay2
+    private lateinit var preview: CameraSourcePreview2
     private lateinit var blinkCountTextView: TextView
     private var blinkCountingActive = true
 
@@ -48,7 +48,7 @@ class EyesActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
-        setContentView(R.layout.activity_eye_blink)
+        setContentView(R.layout.activity_eye_blink2)
 
         faceOverlay = findViewById(R.id.faceOverlay)
         preview = findViewById(R.id.preview)
@@ -57,7 +57,7 @@ class EyesActivity : AppCompatActivity() {
         // Initialize the pleaseShowFaceTextView
         pleaseShowFaceTextView = findViewById(R.id.pleaseShowFaceTextView)
 
-        faceTracker = FaceTracker(faceOverlay, blinkCountCallback, pleaseShowFaceTextView)
+        faceTracker2 = FaceTracker2(faceOverlay, blinkCountCallback, pleaseShowFaceTextView)
 
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
             createCameraSource()
@@ -72,7 +72,7 @@ class EyesActivity : AppCompatActivity() {
                 blinkCount = count
                 blinkCountTextView.text = "Blink Count: $blinkCount"
 
-                if (blinkCount >= 30 && !congratulationDialogShown) {
+                if (blinkCount >= 15 && !congratulationDialogShown) {
                     congratulationDialogShown = true
                     showCongratulationsDialog()
                     blinkCountingActive = false
@@ -141,18 +141,16 @@ class EyesActivity : AppCompatActivity() {
 
         okButton.setOnClickListener {
             dialog.dismiss()
+            val mainActivityIntent = Intent(this@EyesActivity2, HiddenWordActivity::class.java)
+            startActivity(mainActivityIntent)
+            finish() // Optional: finish the current activity if needed
 
-            val fragmentManager = supportFragmentManager
-            val transaction = fragmentManager.beginTransaction()
-            transaction.replace(R.id.fragmentContainerView3, EyewarmupFragmnet())
-            transaction.addToBackStack(null)
-            transaction.commit()
         }
 
 
         restartButton.setOnClickListener {
             dialog.dismiss()
-            val mainActivityIntent = Intent(this@EyesActivity, EyesActivity::class.java)
+            val mainActivityIntent = Intent(this@EyesActivity2, EyesActivity2::class.java)
             startActivity(mainActivityIntent)
             finish() // Optional: finish the current activity if needed
 
@@ -175,12 +173,12 @@ class EyesActivity : AppCompatActivity() {
             .build()
 
         val processor: Detector.Processor<Face> = if (mIsFrontFacing) {
-            val tracker = FaceTracker(faceOverlay, blinkCountCallback, pleaseShowFaceTextView)
+            val tracker = FaceTracker2(faceOverlay, blinkCountCallback, pleaseShowFaceTextView)
 
             LargestFaceFocusingProcessor.Builder(detector, tracker).build()
         } else {
             val factory = MultiProcessor.Factory<Face> {
-                FaceTracker(faceOverlay, blinkCountCallback, pleaseShowFaceTextView)
+                FaceTracker2(faceOverlay, blinkCountCallback, pleaseShowFaceTextView)
             }
             MultiProcessor.Builder(factory).build()
         }
