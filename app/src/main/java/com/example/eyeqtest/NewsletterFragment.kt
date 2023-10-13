@@ -39,7 +39,7 @@ class NewsletterFragment : Fragment() {
                 if (snapshot.exists()) {
                     for (newsletterSnap in snapshot.children) {
                         val newsletterL = newsletterSnap.getValue(NewsletterModal::class.java)
-                            newsletter.add(newsletterL!!)
+                        newsletter.add(newsletterL!!)
 
                     }
                 }
