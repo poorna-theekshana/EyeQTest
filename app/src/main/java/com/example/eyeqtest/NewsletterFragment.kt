@@ -46,6 +46,7 @@ class NewsletterFragment : Fragment() {
                     for (newsletterSnap in snapshot.children) {
                         val newsletterL = newsletterSnap.getValue(NewsletterModal::class.java)
                         newsletter.add(newsletterL!!)
+
                     }
                     recyclerView.adapter?.notifyDataSetChanged()
                 }
