@@ -142,8 +142,17 @@
             android:name=".ContrastSensivity.ContrastSensivityFront"
             android:exported="false" />
         <activity
+            android:name=".blinkingrouting2.EyesActivity2"
+            android:exported="false" />
+
+        <activity
+            android:name=".blinkingrouting3.EyesActivity3"
+            android:exported="false" />
+
+        <activity
             android:name=".blinkingrouting.EyesActivity"
             android:exported="false" />
+
         <activity
             android:name=".ContrastSensivity.ResultActivity"
             android:exported="false" />
