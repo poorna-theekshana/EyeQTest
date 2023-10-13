@@ -1,10 +1,14 @@
 package com.example.eyeqtest.UserAccount
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.eyeqtest.Adapter.ColorBlindTestAdapter
+import com.example.eyeqtest.MainActivity
 import com.example.eyeqtest.Modals.ColorBlindTestModal
 import com.example.eyeqtest.R
 import com.google.firebase.auth.FirebaseAuth
@@ -17,6 +21,7 @@ class ColorBlindProfileRecords : AppCompatActivity() {
     private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var recordRecyclerView: RecyclerView
     private lateinit var recordAdapter: ColorBlindTestAdapter // Create your custom adapter
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,4 +63,5 @@ class ColorBlindProfileRecords : AppCompatActivity() {
             }
         })
     }
+
 }
