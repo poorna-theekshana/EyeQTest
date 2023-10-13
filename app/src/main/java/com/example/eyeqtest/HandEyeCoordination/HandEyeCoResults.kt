@@ -13,12 +13,18 @@ class HandEyeCoResults : AppCompatActivity() {
         setContentView(R.layout.activity_hand_eye_co_results)
 
         val rnum = intent.getLongExtra("righteye",0)
-        val lnum = intent.getLongExtra("lefteye",0)
+        val lnum = intent.getLongExtra("leye",0)
+
+//        rnum.toDouble()
+//        lnum.toDouble()
 
         val rightresult = findViewById<TextView>(R.id.RightEyeHIResult)
         val leftresult = findViewById<TextView>(R.id.LeftEyeHIResult)
 
-        rightresult.text = "$rnum"
-        leftresult.text = "$lnum"
+        val righteyesec = (rnum / 1000.0)
+        val lefteyesec = (lnum / 1000.0)
+
+        rightresult.text = "$righteyesec"
+        leftresult.text = "$lefteyesec "
     }
 }
