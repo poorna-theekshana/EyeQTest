@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".focusshift.HiddenWordActivity"
-    android:background="@drawable/wbackground">
+    android:background="@drawable/background">
 
     <ImageView
         android:id="@+id/word_list"
@@ -1048,7 +1048,7 @@
         android:id="@+id/restart_btn"
         android:layout_width="128dp"
         android:layout_height="66dp"
-        android:backgroundTint="#00BF63"
+        android:backgroundTint="#4682B4"
         android:onClick="reStart"
         android:text="New Game"
         android:textAllCaps="false"
@@ -1063,7 +1063,7 @@
         android:id="@+id/showGeneratedWordsButton"
         android:layout_width="128dp"
         android:layout_height="66dp"
-        android:backgroundTint="#00BF63"
+        android:backgroundTint="#4682B4"
         android:onClick="reStart"
         android:text="Hint"
         android:textAllCaps="false"
