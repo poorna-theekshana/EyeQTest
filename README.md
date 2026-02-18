@@ -51,16 +51,16 @@ A guided routine aimed at reducing daily strain and encouraging healthier eye ha
 
 ## Project structure (high level)
 
-EyeQTest/
-├─ app/
-│ ├─ src/main/
-│ │ ├─ java/ # Kotlin source code
-│ │ ├─ res/ # layouts, drawables, strings
-│ │ └─ AndroidManifest.xml
-│ ├─ build.gradle # app module config
-├─ build.gradle # project config
-├─ settings.gradle
-└─ gradle/ # Gradle wrapper / configs
+#### EyeQTest/
+#### ├─ app/
+#### │ ├─ src/main/
+#### │ │ ├─ java/ # Kotlin source code
+#### │ │ ├─ res/ # layouts, drawables, strings
+#### │ │ └─ AndroidManifest.xml
+#### │ ├─ build.gradle # app module config
+#### ├─ build.gradle # project config
+#### ├─ settings.gradle
+#### └─ gradle/ # Gradle wrapper / configs
 
 ---
 
